@@ -1,0 +1,15 @@
+{
+  "scope": "Syntaxe Mermaid, sans rendu ni validation métier",
+  "results": [
+    {
+      "name": "01-flux-prise-enregistree",
+      "valid": true,
+      "type": "flowchart-v2"
+    },
+    {
+      "name": "02-dialogue-direct",
+      "valid": true,
+      "type": "flowchart-v2"
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "checked_at": "2026-11-22T09:14:23.408Z",
+  "reference_version": "S0-0.4",
+  "status": "passed",
+  "addendum_version": "API-0.1",
+  "browser": "157.0.8103.40",
+  "checks": [
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-guided",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "variant": "se-autonomous",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-guided",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "variant": "se-autonomous",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-guided",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 736,
+      "variant": "se-autonomous",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-guided",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "welcome",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "login",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "preferences",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "home",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "catalog",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "prepare",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "practice",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "feedback",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "finish",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "history",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "report",
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "variant": "se-autonomous",
+      "screen": "account",
+      "status": "passed"
+    },
+    {
+      "name": "Adaptation au précédent couple question/réponse, aide, coupure et reprise simulées",
+      "status": "passed"
+    },
+    {
+      "name": "Question suivante en panne/en attente : aucune nouvelle question imposée et reprise possible",
+      "status": "passed"
+    },
+    {
+      "name": "Réponses différentes : relances différentes ; limite de tours et fin de démonstration",
+      "status": "passed"
+    },
+    {
+      "name": "Référence audio/vidéo ouvrable sans capture",
+      "status": "passed"
+    },
+    {
+      "name": "Addendum fournisseur/API accessible et configurations candidates inactives",
+      "status": "passed"
+    },
+    {
+      "name": "Étape IA/API : priorité affichée et accès à l’avis sans approbation automatique",
+      "status": "passed"
+    },
+    {
+      "name": "Date planifiée et choix candidat préservés dans l’export, sans date observée ni accord inventés",
+      "status": "passed"
+    },
+    {
+      "name": "Atelier : états vierges, export réel sans avis ni séance inventés",
+      "status": "passed"
+    },
+    {
+      "name": "Reprise locale d’un export, sans transmission",
+      "status": "passed"
+    },
+    {
+      "name": "Collecte : fiche incomplète, dates invalides/futures et doublons non comptés comme trois personnes",
+      "status": "passed"
+    },
+    {
+      "name": "Collecte : code participant libre après import, nouvelle fiche sans accord ni date inventés",
+      "status": "passed"
+    }
+  ],
+  "external_network_requests": [],
+  "scope": "Contrôles techniques de maquettes et formulaire ; aucun candidat réel ni avis humain simulé dans le registre."
+}

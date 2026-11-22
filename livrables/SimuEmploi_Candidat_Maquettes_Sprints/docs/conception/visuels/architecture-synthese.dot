@@ -1,0 +1,38 @@
+digraph architecture {
+  graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep="0.45", ranksep="0.7", fontname="Arial", fontsize=22, label="SimuEmploi — architecture Python retenue\nBurkina Faso, puis Mali et Niger", labelloc=t];
+  node [shape=box, style="rounded,filled", fontname="Arial", fontsize=15, margin="0.23,0.16", color="#CBD5E1", fillcolor="#F8FAFC", fontcolor="#0F172A"];
+  edge [color="#64748B", arrowsize=0.8, fontname="Arial", fontsize=11, fontcolor="#475569"];
+  users [label="Candidats • établissements • recruteurs", fillcolor="#DBEAFE", color="#93C5FD"];
+  web [label="Application web / PWA\nReact • texte • audio facultatif • reprise", fillcolor="#DBEAFE"];
+  local [label="IndexedDB\nBrouillons et questions locales", fillcolor="#FEF3C7", color="#FCD34D"];
+  api [label="API Python / FastAPI\nIdentité • droits • sessions • quotas", fillcolor="#CFFAFE", color="#67E8F9"];
+  db [label="PostgreSQL / SQLAlchemy\nDonnées • travaux • outbox", shape=cylinder, fillcolor="#DCFCE7", color="#86EFAC"];
+  dispatcher [label="Dispatcher outbox\nPublication confirmée", fillcolor="#DCFCE7", color="#86EFAC"];
+  queue [label="RabbitMQ privé\nTransport durable", fillcolor="#DCFCE7", color="#86EFAC"];
+  worker [label="Worker Python / Celery\nFeedback • rapports • idempotence", fillcolor="#CFFAFE", color="#67E8F9"];
+  ai [label="Passerelle IA\nGrille • validation • budget", fillcolor="#EDE9FE", color="#C4B5FD"];
+  ext [label="Fournisseur autorisé\nIA / transcription", fillcolor="#EDE9FE", color="#C4B5FD"];
+  oidc [label="Identité OIDC\nPrestataire contractualisé"];
+  pay [label="Paiement local\nConfirmation et rapprochement"];
+  objects [label="Stockage privé facultatif\nCV / médias choisis"];
+  backup [label="Sauvegardes chiffrées\nRestauration testée", fillcolor="#DCFCE7", color="#86EFAC"];
+  obs [label="Supervision\nCoûts • erreurs • accès"];
+  users -> web;
+  web -> api [label="HTTPS"];
+  web -> local [dir=both, label="cache choisi"];
+  api -> oidc;
+  api -> db [label="sauvegarde avant IA"];
+  db -> dispatcher [label="outbox"];
+  dispatcher -> queue [label="confirmation"];
+  queue -> worker;
+  worker -> db;
+  worker -> ai;
+  ai -> ext [label="contexte minimal"];
+  api -> pay;
+  api -> objects;
+  db -> backup;
+  api -> obs [style=dashed];
+  worker -> obs [style=dashed];
+  {rank=same; db; oidc; pay; objects}
+  {rank=same; worker; backup; obs}
+}

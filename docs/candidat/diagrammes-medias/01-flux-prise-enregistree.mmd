@@ -1,0 +1,10 @@
+flowchart LR
+  A[Prise locale] --> B[Relecture et choix d'envoi]
+  B --> C[Envoi autorisé par FastAPI]
+  C --> D[Stockage privé et confirmation]
+  D --> E[État durable et outbox]
+  E --> F[Worker de transcription]
+  F --> G[Transcription à relire]
+  G --> H[Version confirmée]
+  H --> I[Évaluation pédagogique]
+  I --> J[Rapport et replay autorisé]

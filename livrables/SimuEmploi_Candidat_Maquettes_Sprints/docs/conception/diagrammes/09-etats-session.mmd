@@ -1,0 +1,21 @@
+stateDiagram-v2
+    [*] --> Preparee
+    Preparee --> Active: premier exercice disponible
+    Active --> ReponseSauvegardee: validation et commit
+    ReponseSauvegardee --> EvaluationEnCours: travail revendique
+    EvaluationEnCours --> Active: retour et prochaine question
+    EvaluationEnCours --> ModeDegrade: echec annonce
+    ModeDegrade --> Active: question du referentiel
+    Active --> EnPause: pause choisie
+    EnPause --> Active: reprise autorisee
+    Active --> Terminee: fin demandee ou plan termine
+    EvaluationEnCours --> Terminee: derniere reponse traitee
+    ModeDegrade --> Terminee: fin avec limites explicites
+    EnPause --> Abandonnee: abandon choisi
+    Active --> Abandonnee: abandon choisi
+    Terminee --> [*]
+    Abandonnee --> [*]
+    note right of Terminee
+        La fin de session ne signifie pas
+        que le rapport IA est deja pret.
+    end note

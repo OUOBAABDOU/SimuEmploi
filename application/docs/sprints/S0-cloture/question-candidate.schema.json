@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "S0-0.4 — proposition de prochaine question, non endpoint implémenté",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prompt", "axis_key", "kind", "response_kind", "criterion_keys", "anchor_question_id", "anchor_answer_id", "rationale_code"],
+  "properties": {
+    "prompt": {"type": "string", "minLength": 1, "maxLength": 700},
+    "axis_key": {"type": "string", "minLength": 1, "maxLength": 50},
+    "kind": {"enum": ["clarification", "next_axis"]},
+    "response_kind": {"enum": ["real_example", "hypothetical_approach", "explanation"]},
+    "criterion_keys": {"type": "array", "minItems": 1, "maxItems": 4, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 50}},
+    "anchor_question_id": {"type": "string", "format": "uuid"},
+    "anchor_answer_id": {"type": "string", "format": "uuid"},
+    "rationale_code": {"enum": ["clarify_current_answer", "cover_next_axis", "clarify_relevant_example"]}
+  }
+}

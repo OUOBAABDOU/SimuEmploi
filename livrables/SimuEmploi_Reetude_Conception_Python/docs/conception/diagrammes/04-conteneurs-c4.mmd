@@ -1,0 +1,16 @@
+flowchart TB
+    U[Utilisateurs] --> W[Web React et PWA]
+    W <--> L[(IndexedDB : brouillons et reprise choisie)]
+    W -->|HTTPS meme origine| API[API Node et Express modulaire]
+    API -->|Connexion et callback| OIDC[Identite OIDC]
+    API -->|Transactions, droits et usage| DB[(PostgreSQL)]
+    API -->|Travaux atomiques| Q[(Queue pg-boss dans PostgreSQL)]
+    Q --> WK[Worker du meme domaine metier]
+    WK --> DB
+    WK --> AI[Adaptateurs IA et transcription]
+    AI --> EXT[Fournisseurs autorises]
+    API --> OBJ[(Stockage objet prive facultatif)]
+    API --> PAY[Adaptateur paiement local]
+    PAY --> PSP[Prestataire et webhooks verifies]
+    API --> OBS[Logs minimaux et metriques]
+    WK --> OBS

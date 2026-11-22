@@ -1,0 +1,39 @@
+sequenceDiagram
+    actor C as Candidat
+    participant W as Web PWA
+    participant A as FastAPI
+    participant D as PostgreSQL
+    participant P as Dispatcher outbox
+    participant B as RabbitMQ
+    participant J as Worker Python Celery
+    participant I as Fournisseur IA
+    C->>W: Valider une reponse relue
+    W->>W: Conserver brouillon et identifiant stable
+    W->>A: POST answer avec Idempotency-Key
+    A->>A: Verifier identite, droits, etat et limites
+    A->>D: Transaction reponse + reserve usage + travail + outbox
+    D-->>A: Commit confirme
+    A-->>W: Reponse sauvegardee, evaluation en attente
+    W->>W: Confirmer la synchronisation locale
+    P->>D: Lire evenement outbox non publie
+    P->>B: Publier evenement avec identifiant stable
+    B-->>P: Confirmer publication
+    P->>D: Marquer evenement publie
+    Note over P,B: Publication repetee possible apres panne
+    B->>J: Livrer travail
+    Note over J,D: Ignorer travail termine et revendiquer atomiquement
+    J->>D: Revendiquer travail et lire contexte autorise
+    J->>I: Grille versionnee et reponse minimale
+    alt Sortie valide
+        I-->>J: Appreciation structuree et extraits
+        J->>J: Valider schema, preuves et regles
+        J->>D: Sauvegarder evaluation et progression
+    else Echec ou resultat invalide
+        I-->>J: Erreur, timeout ou sortie invalide
+        J->>D: Marquer indisponible ou reprise bornee
+    end
+    J-->>B: Acquitter apres enregistrement durable
+    W->>A: Lire etat de session
+    A->>D: Lire les ressources autorisees
+    A-->>W: Feedback ou etat explicite de degradation
+    W-->>C: Prochaine question ou fin avec limites

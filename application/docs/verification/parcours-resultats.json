@@ -1,0 +1,60 @@
+{
+  "executed_at": "2026-11-21T23:19:16.064Z",
+  "baseURL": "http://127.0.0.1:5173",
+  "browser": "157.0.8103.40",
+  "checks": [
+    {
+      "name": "Accueil réel et illustration sur ordinateur",
+      "status": "passed"
+    },
+    {
+      "name": "Catalogue connecté : 3 exemples, notice de relecture",
+      "status": "passed"
+    },
+    {
+      "name": "Filtre premier emploi/stage et plan de 5 questions",
+      "status": "passed"
+    },
+    {
+      "name": "Ouverture d’une question et de ses repères",
+      "status": "passed"
+    },
+    {
+      "name": "Lien d’évitement clavier sans changement de parcours",
+      "status": "passed"
+    },
+    {
+      "name": "Actualisation de fiche et retour conservant le filtre",
+      "status": "passed"
+    },
+    {
+      "name": "Deuxième filtre et autre exercice",
+      "status": "passed"
+    },
+    {
+      "name": "4 écrans à 320, 360 et 768 px sans débordement horizontal",
+      "status": "passed"
+    },
+    {
+      "name": "Fiche absente : message utile et retour possible",
+      "status": "passed"
+    },
+    {
+      "name": "Panne réseau simulée puis réessai réussi avec API réelle",
+      "status": "passed"
+    },
+    {
+      "name": "Catalogue vide simulé distinct de la panne",
+      "status": "passed"
+    },
+    {
+      "name": "Filtre lent : aucun ancien exercice affiché comme résultat courant",
+      "status": "passed"
+    },
+    {
+      "name": "Aucune erreur JavaScript non traitée",
+      "status": "passed"
+    }
+  ],
+  "note": "API réelle ; panne, vide et lenteur simulés par interception explicite."
+}

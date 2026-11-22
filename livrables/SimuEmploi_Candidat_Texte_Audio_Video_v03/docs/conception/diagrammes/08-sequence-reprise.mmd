@@ -1,0 +1,26 @@
+sequenceDiagram
+    actor C as Candidat
+    participant W as PWA
+    participant L as IndexedDB
+    participant A as API
+    participant D as PostgreSQL
+    C->>W: Valider pendant une coupure
+    W->>L: Brouillon + question + soumission stable
+    W-->>C: En attente de synchronisation
+    Note over W,L: Aucun resultat IA cloud annonce hors ligne
+    C->>W: Retrouver le reseau et reprendre
+    W->>W: Verifier identite et finalite initiales
+    W->>L: Lire les soumissions en attente
+    W->>A: Soumettre avec le meme identifiant
+    A->>D: Verifier droits, etat, quota et doublon
+    alt Deja sauvegardee
+        D-->>A: Reponse existante
+        A-->>W: Accuse identique, aucune nouvelle consommation client
+    else Nouvelle reponse autorisee
+        A->>D: Transaction reponse et travail
+        A-->>W: Sauvegarde confirmee
+    else Conflit ou droit revoque
+        A-->>W: Refus explicite et motif
+        W-->>C: Brouillon conserve selon politique, action requise
+    end
+    W->>L: Mettre a jour seulement apres confirmation

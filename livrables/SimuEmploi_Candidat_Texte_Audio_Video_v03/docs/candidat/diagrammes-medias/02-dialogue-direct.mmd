@@ -1,0 +1,8 @@
+flowchart LR
+  A[Candidat et permissions] --> B[FastAPI autorise le dialogue]
+  B --> C[Session de transport éphémère]
+  C --> D[Dialogue vocal du fournisseur]
+  D --> E[Question, interruption et sous-titres]
+  E --> A
+  D --> F[Tours confirmés et arrêt]
+  F --> G[Transcription et rapport durable]

@@ -1,0 +1,80 @@
+erDiagram
+    USER ||--o{ MEMBERSHIP : appartient
+    ORGANIZATION ||--o{ MEMBERSHIP : possede
+    USER ||--o{ SESSION : detient
+    ORGANIZATION |o--o{ SESSION : encadre
+    SCENARIO ||--|{ SCENARIO_VERSION : versionne
+    RUBRIC_VERSION ||--o{ SCENARIO_VERSION : definit
+    SCENARIO_VERSION ||--o{ SESSION : configure
+    SESSION ||--o{ QUESTION : contient
+    QUESTION ||--o{ ANSWER : recoit
+    ANSWER ||--o{ EVALUATION : produit
+    RUBRIC_VERSION ||--o{ EVALUATION : applique
+    SESSION ||--o{ REPORT : restitue
+    REPORT ||--o{ REPORT_EVALUATION : cite
+    EVALUATION ||--o{ REPORT_EVALUATION : alimente
+    ORGANIZATION ||--o{ CAMPAIGN : organise
+    RUBRIC_VERSION ||--o{ CAMPAIGN : fige
+    CAMPAIGN ||--o{ PARTICIPANT : inscrit
+    USER ||--o{ PARTICIPANT : participe
+    SESSION |o--o| PARTICIPANT : relie
+    PARTICIPANT ||--o{ REVIEW : recoit
+    USER ||--o{ REVIEW : effectue
+    USER ||--o{ SHARE_GRANT : accorde
+    SESSION ||--o{ SHARE_GRANT : partage
+    USER ||--o{ USAGE_ENTRY : consomme
+    USER {
+        uuid id PK
+        string identity_subject UK
+        string locale
+    }
+    ORGANIZATION {
+        uuid id PK
+        string type
+        string country_code
+    }
+    MEMBERSHIP {
+        uuid user_id FK
+        uuid organization_id FK
+        string role
+        string status
+    }
+    SESSION {
+        uuid id PK
+        uuid owner_user_id FK
+        uuid organization_id FK
+        uuid scenario_version_id FK
+        string purpose
+        string status
+        int revision
+    }
+    ANSWER {
+        uuid id PK
+        uuid question_id FK
+        string client_submission_id UK
+        string validated_text
+        int duration_ms
+    }
+    EVALUATION {
+        uuid id PK
+        uuid answer_id FK
+        uuid rubric_version_id FK
+        string status
+        string model_id
+        string prompt_version
+    }
+    REPORT {
+        uuid id PK
+        uuid session_id FK
+        int version
+        string status
+    }
+    SHARE_GRANT {
+        uuid id PK
+        uuid session_id FK
+        uuid grantor_user_id FK
+        string recipient
+        string scope
+        datetime expires_at
+        datetime revoked_at
+    }

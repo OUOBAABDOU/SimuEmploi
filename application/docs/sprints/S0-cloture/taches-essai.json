@@ -1,0 +1,42 @@
+[
+  {
+    "id": "T01",
+    "instruction": "Expliquez avec vos mots à quoi sert SimuEmploi et sa limite."
+  },
+  {
+    "id": "T02",
+    "instruction": "Choisissez un exercice pour un premier stage ou emploi."
+  },
+  {
+    "id": "T03",
+    "instruction": "Préparez puis saisissez une réponse fictive et trouvez l’aide."
+  },
+  {
+    "id": "T04",
+    "instruction": "Pendant une coupure simulée, expliquez où se trouve votre brouillon."
+  },
+  {
+    "id": "T05",
+    "instruction": "Faites une pause, revenez à l’accueil puis retrouvez la réponse."
+  },
+  {
+    "id": "T06",
+    "instruction": "Expliquez la différence entre réponse conservée et retour indisponible."
+  },
+  {
+    "id": "T07",
+    "instruction": "Lisez un rapport partiel et choisissez un point à retravailler."
+  },
+  {
+    "id": "T08",
+    "instruction": "Trouvez la demande de suppression puis annulez-la."
+  },
+  {
+    "id": "T09",
+    "instruction": "Observez le lien de la question suivante avec la question et votre réponse précédentes."
+  },
+  {
+    "id": "T10",
+    "instruction": "Si la question suivante est indisponible, retrouvez votre réponse et la possibilité de réessayer."
+  }
+]

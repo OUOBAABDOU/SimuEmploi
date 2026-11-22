@@ -1,0 +1,19 @@
+flowchart LR
+    C[Candidat] --> U1([Choisir et pratiquer un exercice])
+    C --> U2([Relire sa transcription et son rapport])
+    C --> U3([Partager, revoquer ou demander une suppression])
+    F[Formateur] --> U4([Gerer cohortes et exercices attribues])
+    F --> U5([Consulter les resultats pedagogiques autorises])
+    R[Recruteur] --> U6([Creer une campagne avec grille approuvee])
+    R --> U7([Relire les preuves et motiver une decision])
+    C --> U8([Participer a une campagne et signaler une erreur])
+    A[Administration] --> U9([Gerer service, facturation et incidents])
+    U1 --> D[Controle des droits et de la finalite]
+    U2 --> D
+    U3 --> D
+    U4 --> D
+    U5 --> D
+    U6 --> D
+    U7 --> D
+    U8 --> D
+    U9 --> D

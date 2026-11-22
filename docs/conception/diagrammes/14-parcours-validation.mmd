@@ -1,0 +1,11 @@
+flowchart LR
+    B[Probleme et partenaires observes] --> M[MVP : preparation et cohortes simples]
+    M --> P[Pilote Burkina mesure]
+    P --> V{Valeur, cout et fiabilite demontres ?}
+    V -->|A ajuster| M
+    V -->|Oui| O[Ouverture Burkina progressive]
+    O --> AES[Pilotes Mali et Niger par pays]
+    M --> REC[Validation recruteur en parallele]
+    REC --> G{Grille, revue et formalites satisfaites ?}
+    G -->|Oui| R[Usage recruteur encadre]
+    G -->|Non| REC

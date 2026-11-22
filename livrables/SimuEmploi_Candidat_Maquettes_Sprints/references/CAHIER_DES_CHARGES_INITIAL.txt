@@ -1,0 +1,134 @@
+Voici le rapport complet et le cahier des charges détaillé du projet SimuEmploi AI, basé sur l’état exact du code actuel, de son architecture serveur/client, de son modèle économique (Lean Canvas) et de la feuille de route des évolutions à intégrer par la suite.
+CAHIER DES CHARGES & RAPPORT DE PROJET — SimuEmploi AI
+1. Synthèse Exécutive & Présentation du Projet
+1.1 Identité du Projet
+Nom de l’application : SimuEmploi AI — Entretiens & Coaching
+Nature : Application web full-stack de simulation d’épreuves orales et de coaching comportemental par Intelligence Artificielle.
+Problème résolu : Le manque de préparation réaliste avant un entretien ou un oral, le coût élevé du coaching humain (80–200 €/h) et l’absence de retour objectif simultané sur le fond (structuration des arguments) et la forme (voix, tics de langage, posture, contact visuel).
+Proposition de valeur : Un coach virtuel adaptatif accessible 24h/24 combinant mise en situation réaliste, analyse audio/vidéo en temps réel et rapport diagnostique complet selon la méthode STAR (Situation, Tâche, Action, Résultat).
+1.2 Cibles & Personas Utilisateurs
+Étudiants & Jeunes Diplômés : Préparation aux stages, alternances, soutenances de mémoire/thèse, oraux d’admission (Grandes Écoles) et concours administratifs.
+Candidats & Professionnels en Reconversion : Entraînement ciblé par secteur, niveau de séniorité et stack technique.
+Fondateurs, Commerciaux & Porte-Paroles : Simulation de pitchs d’investisseurs (VC), négociations B2B grands comptes, hackathons et média-training de crise.
+Clients B2B / B2B2C (à venir) : Universités, grandes écoles, centres de formation, cabinets de recrutement et organismes d’insertion.
+1.3 Modèle Économique Cible (issu du Lean Canvas)
+Freemium : 1 simulation découverte gratuite (5 min) avec rapport synthétique.
+Pass Entretien (achat ponctuel) : 9,99 € pour un accès illimité pendant 7 jours.
+Abonnement Mensuel B2C : 19,99 € / mois sans engagement.
+Licences B2B Écoles & Entreprises : Tarification annuelle sur mesure au volume d’utilisateurs.
+2. Architecture Technique Actuelle (Disponible)
+2.1 Stack Technologique Vérifiée
+Frontend : React 19.0.1, TypeScript ~5.8.2, Vite 6.2.3, Tailwind CSS v4 (@tailwindcss/vite 4.1.14).
+UI, Graphiques & Animations : lucide-react (0.546.0), recharts (3.10.1), motion (12.23.24), canvas-confetti (1.9.4).
+Backend : Node.js + Express 4.21.2 (server.ts, port 3000), dotenv, tsx (développement), esbuild (compilation production vers dist/server.cjs).
+Moteur d’IA : SDK @google/genai (^2.4.0), modèle gemini-3.6-flash appelé exclusivement côté serveur avec sorties JSON structurées (responseSchema).
+APIs Navigateur exploitées :
+MediaDevices.getUserMedia (Webcam 640×480 + Microphone).
+Web Audio API (AudioContext + AnalyserNode pour niveau sonore RMS).
+Web Speech API (SpeechRecognition / webkitSpeechRecognition et SpeechSynthesisUtterance en fr-FR).
+MediaRecorder (video/webm;codecs=vp9,opus).
+localStorage et window.print() (feuille de style @media print dédiée).
+Génération documentaire annexe : pdfkit (0.19.1) utilisé par scripts/generate_pdf.cjs pour produire public/Lean_Canvas_SimuEmploi_AI.pdf.
+2.2 Arborescence Réelle du Code
+server.ts : Serveur Express, endpoints IA/feedback, middleware Vite (dev) et service statique dist (prod).
+metadata.json : Permissions iframe (camera, microphone) et capacité serveur Gemini.
+src/App.tsx : Navigation principale par onglets (setup, scenarios, history, star_guide, feedback, interview, report) et persistance localStorage.
+src/types.ts : Contrats de données TypeScript (SimulationCategory, SectorId, PrebuiltScenario, LiveAudioMetrics, LiveVideoMetrics, QuestionAnswerRecord, FinalReportData, SavedInterviewSession, UserStats, AppFeedback).
+src/data/sectorsAndScenarios.ts : 6 catégories d’épreuves, 8 secteurs détaillés, 9 scénarios pré-construits, 1 session de démonstration initiale.
+src/hooks/ :
+useRealtimeAudio.ts : Reconnaissance vocale continue, calcul du débit (MPM/WPM), détection de tics de langage, volume et score d’assurance.
+useRealtimeVideo.ts : Flux webcam, capture d’image JPEG base64 via canvas et métriques HUD.
+useAudioRecorder.ts (useMediaRecorder) : Enregistrement local WebM (vidéo + audio).
+src/components/ : Navbar, SetupScreen, ScenarioLibrary, InterviewRoom, BodyLanguageTooltipModal, InterviewReportView, HistoryDashboard, StarMethodGuide, FeedbackSection.
+2.3 Endpoints API Backend Actuels (server.ts)
+Méthode & Route	Rôle	Entrées principales	Sortie
+POST /api/interview/start	Génère le persona du jury/recruteur et la 1re question	category, sector, role, experienceLevel, interviewStyle, mode, customScenario, selectedTechStack	recruiterName, recruiterTitle, companyName, interviewContext, keyCompetencies, totalQuestions, firstQuestion, initialLiveTip
+POST /api/interview/respond	Évalue la réponse, réagit et génère la question suivante	category, sector, role, interviewStyle, questionHistory, userResponseText, currentQuestionIndex, totalQuestions, selectedTechStack	recruiterReaction, nextQuestion, isFinished, instantFeedback (starScore, relevanceScore, concisenessRating, strongAspect, improvementHint)
+POST /api/interview/analyze-frame	Analyse multimodale d’une image webcam via Gemini Vision	imageBase64	eyeContactScore, postureQuality, facialExpression, perceivedConfidence, realtimeTip
+POST /api/interview/generate-report	Produit le bilan RH/jury complet en fin de session	sector, role, experienceLevel, history, audioMetricsSummary, videoMetricsSummary	overallScore, 4 sous-scores, executiveSummary, topStrengths, keyAreasForImprovement, questionAnalysis (avec idealStarResponse), personalizedActionPlan
+POST /api/feedback & GET /api/feedback	Enregistre et liste les suggestions utilisateurs	type, title, description, category, rating, userEmail	Objet feedback stocké en mémoire serveur (serverFeedbackList)
+3. Spécifications Fonctionnelles — Périmètre Disponible (V1)
+3.1 Module de Configuration (SetupScreen.tsx)
+6 catégories d’épreuves adaptant automatiquement le persona IA côté serveur :
+Entretien d’Embauche & RH
+Examens, Concours & Grand Oral
+Pitchs, Levées de Fonds & Vente
+Compétitions & Hackathons
+Soutenances, Devoirs & Projets
+Activités Pratiques & Média Training
+8 secteurs métiers (Tech & Informatique, Finance & Banque, Santé & Médical, Ventes & Marketing, Ingénierie & Industrie, Ressources Humaines, Droit & Juridique, Hôtellerie & Tourisme) avec suggestions de postes populaires.
+Sélecteur de compétences & stack technique (53 éléments prédéfinis + ajout libre) :
+14 langages de programmation, 15 frameworks/librairies, 14 outils Cloud/DevOps/BDD, 10 outils métier/finance/marketing.
+Recherche temps réel et boutons Tout cocher / Tout décocher.
+Paramètres d’épreuve : 4 niveaux (débutant à executive), 4 formats (classique, mise_en_situation, cas_pratique, negociation_salaire), 4 attitudes de jury (bienveillant, professionnel, stress_test, technique), volume de questions (3, 4, 6, 8), énoncé personnalisé optionnel, activation/désactivation de la synthèse vocale et fiche de préparation (Warm-up).
+3.2 Bibliothèque de Scénarios (ScenarioLibrary.tsx)
+Catalogue de 9 scénarios prêts à l’emploi couvrant la gestion de crise CTO, négociation B2B, Grand Oral ENA/INSP, oraux Grandes Écoles, Pitch Seed 1,5M€, Pitch SaaS B2B, Hackathon IA, Soutenance Master/Thèse et Média Training.
+Filtrage croisé par type d’épreuve et par secteur, avec pré-remplissage direct du formulaire de simulation.
+3.3 Studio de Simulation Live (InterviewRoom.tsx)
+Salle virtuelle IA : Carte d’identité du recruteur/jury généré, égaliseur vocal animé pendant la diction, réécoute manuelle de la question.
+Coaching STAR en direct : Mode Coach activable avec checklist interactive cliquable (Situation, Tâche, Action, Résultat).
+Flux vidéo & HUD comportemental : Retour caméra miroir, chronomètre global, compteurs live (Contact Visuel %, Débit WPM, Assurance /100, Hésitations).
+Analyse vocale temps réel :
+Retranscription en direct éditable manuellement au clavier.
+Détection automatique par regex de 9 tics de langage français (euh, heu, donc, en fait, genre, du coup, voilà, basiquement, littéralement).
+Soumission automatique sur silence (après 2,5 s de silence + compte à rebours visuel de 3 s annulable par le candidat).
+Modale d’aide posturale (BodyLanguageTooltipModal.tsx) : 4 onglets pédagogiques (Contact Visuel, Posture & Cadrage, Visage & Gestuelle, Lumière & Caméra).
+Diagnostic instantané : Retour chiffré après chaque réponse (starScore, point fort, astuce d’amélioration) et mécanisme de secours (fallback) si l’API est indisponible.
+3.4 Rapport Final & Analyse (InterviewReportView.tsx)
+Score global /100 (avec confettis si score 
+) et 4 piliers (Tonalité Vocale, Langage Corporel, Méthode STAR, Fluidité Orale).
+Graphique Radar (Recharts) comparant le candidat au niveau attendu.
+Synthèse exécutive, forces majeures, axes d’amélioration, analyse question par question avec modèle de réponse idéale STAR, et plan d’action personnalisé.
+Actions de sortie : copie texte dans le presse-papier, impression / export PDF navigateur (window.print()).
+3.5 Historique & Progression (HistoryDashboard.tsx)
+Persistance locale dans localStorage (simuemploi_sessions).
+Statistiques cumulées, graphique d’évolution temporelle multi-courbes (LineChart), 4 badges de gamification, consultation des anciens rapports et réinitialisation de l’historique.
+3.6 Guide STAR & Échauffement Vocal (StarMethodGuide.tsx)
+Cours structuré sur les 4 piliers STAR et la communication orale/visuelle.
+Studio de Diction Express : Protocole de respiration 4-7-8, déverrouillage articulaire et 5 virelangues interactifs avec écoute audio à vitesse variable (0.8x, 1.0x, 1.2x) et test au microphone.
+3.7 Boîte à Suggestions & Avis (FeedbackSection.tsx)
+Soumission typée (Suggestion, Recommandation, Fonctionnalité, Remarque/Bug), note /5 étoiles, raccourcis d’idées, upvotes, filtres, sauvegarde localStorage (simuemploi_feedbacks) et envoi asynchrone vers /api/feedback.
+4. Audit Technique : Écarts & Dettes Constatés dans l’Existant
+Pour fiabiliser la V1 avant d’ajouter de nouvelles briques, le code actuel présente les points suivants à corriger prioritairement :
+Analyse vidéo non branchée à l’IA en live : useRealtimeVideo.ts simule actuellement des variations aléatoires toutes les 4 secondes (Math.random()). Dans InterviewRoom.tsx, captureFrameBase64() capture bien l’image lors de la validation d’une réponse, mais n’appelle pas encore POST /api/interview/analyze-frame.
+Paramètre selectedTechStack non transmis au suivi de conversation : InterviewRoom.tsx l’envoie à /api/interview/start, mais l’omet dans le payload de /api/interview/respond (pourtant prévu dans server.ts).
+Doublon UI dans SetupScreen.tsx : Le bloc Stack & Outils apparaît à la fois en bas de la colonne gauche et dans la colonne droite sticky, avec un décalage de numérotation des étapes (1, 2, 3, 3, 4, 5).
+Bug de champs dans la copie du rapport (InterviewReportView.tsx) : handleCopyTranscript lit item.question, item.userAnswer et item.feedback.instantAdvice alors que QuestionAnswerRecord utilise questionText, userAnswerText et instantFeedback.
+Enregistrement vidéo/audio non exploité après session : useMediaRecorder produit un recordedBlobUrl, mais aucun lecteur replay n’est affiché dans InterviewReportView.tsx et le flux est perdu à la fermeture de l’onglet.
+État inutilisé et types partiels : HistoryDashboard.tsx déclare sectorFilter sans menu de filtre associé ; SectorId inclut luxury et education qui ne figurent pas dans SECTORS ; README.md mentionne encore gemini-2.5-flash et services/geminiService.ts alors que l’app utilise gemini-3.6-flash via appels fetch directs.
+Métadonnées HTML par défaut : index.html contient encore <html lang="en"> et <title>My Google AI Studio App</title>.
+Persistance serveur volatile : Les feedbacks sur /api/feedback sont stockés dans un tableau en RAM (serverFeedbackList) et perdus à chaque redémarrage du serveur.
+5. Spécifications Évolutives — Fonctionnalités "À Mettre Plus Tard" (Roadmap)
+Phase 1 : Stabilisation & Finition V1.1 (Court Terme)
+Branchement complet de la Vision : Envoyer périodiquement (ex. toutes les 10–15 s ou à chaque réponse) une capture webcam vers /api/interview/analyze-frame et fusionner ces scores avec une détection faciale locale légère.
+Nettoyage UI & Corrections de bugs : Supprimer le bloc Stack dupliqué dans SetupScreen.tsx, corriger handleCopyTranscript, transmettre selectedTechStack à /api/interview/respond, ajouter le filtre par secteur dans HistoryDashboard.tsx, compléter les secteurs education et luxury.
+Lecteur Replay Post-Entretien : Afficher le lecteur vidéo WebM (recordedBlobUrl) dans InterviewReportView.tsx pour permettre l’auto-visionnage critique et le téléchargement local du fichier vidéo.
+SEO & Identité HTML : Mettre à jour index.html (lang="fr", titre, meta description, balises OpenGraph).
+Phase 2 : Mode Hors-Connexion (PWA), Audio/Vidéo Avancés & Export (Moyen Terme)
+Support Hors-Connexion (PWA) :
+Actuellement, l’application ne fonctionne pas pleinement hors ligne : la génération IA requiert le serveur + Gemini API, et SpeechRecognition sur navigateur s’appuie généralement sur des serveurs distants.
+À implémenter : manifest.webmanifest + icônes installables, Service Worker (cache des assets statiques, guide STAR, exercices de diction et bibliothèque de scénarios), migration de localStorage vers IndexedDB (pour stocker rapports lourds + enregistrements vidéo/audio WebM), banque locale de questions de secours par secteur/niveau pour un mode d’entraînement 100 % offline, et file de synchronisation différée (Background Sync) pour générer les rapports IA dès le retour du réseau.
+Analyse Comportementale Locale Réelle (Sans Latence Réseau) :
+Intégration de MediaPipe Face Landmarker / Pose (WebAssembly côté client) pour mesurer réellement l’orientation du regard, la symétrie des épaules, la stabilité de la tête et le cadrage à 15–30 FPS sans coût d’API ni fuite d’images.
+Dialogue Vocal Temps Réel Haute Fidélité :
+Remplacement optionnel de window.speechSynthesis par une voix neurale naturelle ou l’API Gemini Live (WebSockets audio bidirectionnels) permettant les interruptions naturelles et un temps de réponse quasi instantané.
+Multilingue Complet (FR / EN / ES) :
+Sélecteur de langue dans SetupScreen.tsx pilotant les prompts Gemini, la reconnaissance vocale (en-US, fr-FR, etc.) et la diction des tics de langage anglophones (um, uh, like, basically, actually).
+Export PDF Serveur Professionnel :
+Endpoint POST /api/report/pdf exploitant pdfkit (déjà présent dans package.json) pour générer un document PDF multi-pages avec graphiques, scores et plan d’action téléchargeable et partageable.
+Phase 3 : Plateforme SaaS, Comptes, B2B & Monétisation (Long Terme)
+Authentification & Base de Données Persistante :
+Comptes utilisateurs (Firebase Auth ou OAuth Google/Email) et base de données cloud (Firestore ou Cloud SQL PostgreSQL avec ORM) pour synchroniser l’historique, les replays et les feedbacks entre appareils.
+Import de CV & Offre d’Emploi (RAG / Contexte) :
+Upload de CV (PDF) et collage d’une fiche de poste (ou URL LinkedIn) afin que le recruteur IA croise le parcours réel du candidat avec les exigences du poste.
+Espace B2B Écoles, Universités & Entreprises :
+Tableau de bord administrateur/formateur, création de cohortes d’étudiants, partage de scénarios personnalisés par promotion, suivi agrégé des scores et export CSV/PDF pour jurys.
+Monétisation & Quotas (Stripe) :
+Gestion des crédits/abonnements conformes au Lean Canvas (Freemium 5 min, Pass 7 jours à 9,99 €, Abonnement mensuel à 19,99 €, Licences B2B), webhooks Stripe et contrôle des quotas côté serveur.
+Sécurité, Scalabilité & Conformité RGPD :
+Validation stricte des payloads API (ex. zod), limitation de débit (rate limiting) sur les routes Gemini, gestion des consentements caméra/micro/stockage, politique de rétention et suppression des données en un clic (droit à l’oubli).
+6. Spécifications Non-Fonctionnelles & Critères d’Acceptation
+Ergonomie & Responsive : Interface sombre (slate-950 / indigo) adaptée du mobile (360 px avec barre de navigation basse dédiée) aux écrans larges (max-w-[1600px]), avec contrastes lisibles et zones tactiles minimales de 44px sur mobile.
+Confidentialité : Les flux vidéo et audio bruts restent locaux (aucun stockage vidéo serveur en V1). La clé GEMINI_API_KEY est strictement confinée côté backend (server.ts) et jamais exposée au client.
+Résilience : Aucun blocage complet en cas d’indisponibilité micro/caméra (saisie texte manuelle toujours possible dans le studio) ou d’erreur API (questions et rapport de secours automatiques).
+Critères de validation technique : Compilation TypeScript sans erreur (npm run lint / tsc --noEmit) et build production complet (npm run build : bundle client Vite + bundle serveur esbuild).

@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-22T09:16:33.768343+00:00",
+  "reference_version": "S0-0.4",
+  "addendum_version": "API-0.1",
+  "status": "awaiting_human_evidence",
+  "preparation_complete": true,
+  "s0_received": false,
+  "evidence_source": "C:\\Users\\OUOBA\\Documents\\ChatGPT\\SimulEmploi\\application\\docs\\sprints\\S0-cloture\\preuves-humaines.json",
+  "missing_human_evidence": [
+    "Essais réels exploitables : 0/3 minimum proposé, cible cinq.",
+    "Avis responsable sur référence produit et essais à recevoir."
+  ],
+  "scope": "Complétude des déclarations ; authenticité et réalité des séances à attester par le responsable produit.",
+  "other_sprints_allowed_by_this_gate": false
+}

@@ -1,0 +1,10 @@
+flowchart TB
+    C[Candidat adulte] -->|Se prepare et choisit ses partages| S[SimuEmploi]
+    F[Formateur ou conseiller] -->|Attribue et accompagne| S
+    R[Recruteur habilite] -->|Organise un exercice et relit| S
+    A[Exploitant et support] -->|Maintient et assiste selon ses droits| S
+    S -->|Authentification| I[Fournisseur d'identite autorise]
+    S -->|Contexte minimal autorise| G[Fournisseur IA ou transcription]
+    S -->|Achat et confirmation serveur| P[Prestataire de paiement]
+    S -->|Notification minimale| M[Service de notification]
+    S -->|Export ou rapport autorise| C

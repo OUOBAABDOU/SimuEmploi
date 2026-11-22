@@ -1,0 +1,16 @@
+flowchart TB
+    P[Poste et competences pertinentes] --> G[Grille, exercice et regles approuves]
+    G --> I[Invitation et information du candidat]
+    I --> S[Session de campagne distincte du coaching prive]
+    S --> R[Reponse relue et validee]
+    R --> E[Appreciation IA avec criteres et extraits]
+    E --> H[Revue humaine habilitee]
+    H --> Q{Elements suffisants ?}
+    Q -->|Non| C[Complement ou correction]
+    C --> H
+    Q -->|Oui| D[Decision humaine motivee]
+    D --> A[Trace, information et recours]
+    A --> V[Revision humaine si necessaire]
+    V --> H
+    N[Visage, accent, stress suppose et personnalite exclus] -.-> G
+    L[Validation et formalites avant usage reel] -.-> G

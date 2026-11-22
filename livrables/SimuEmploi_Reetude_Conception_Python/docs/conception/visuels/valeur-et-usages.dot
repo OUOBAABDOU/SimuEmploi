@@ -1,0 +1,20 @@
+digraph valeur {
+  graph [rankdir=LR, bgcolor="white", pad="0.35", nodesep="0.55", ranksep="0.85", fontname="Arial", fontsize=22, label="SimuEmploi — problème, valeur et trois usages\nUne cible commune ; des finalités et des accès distincts", labelloc=t];
+  node [shape=box, style="rounded,filled", fontname="Arial", fontsize=15, margin="0.24,0.18", color="#CBD5E1", fillcolor="#F8FAFC", fontcolor="#0F172A"];
+  edge [color="#64748B", arrowsize=0.8, fontname="Arial", fontsize=11, fontcolor="#475569"];
+  p [label="Besoin à valider\nPratiquer un oral pertinent\net recevoir un retour concret", fillcolor="#FEF3C7", color="#FCD34D"];
+  cycle [label="Cycle de préparation\nExercice local → réponse relue\nRetour expliqué → nouvel essai", fillcolor="#DBEAFE", color="#93C5FD"];
+  c [label="Candidat\nEntraînement personnel\nPartage choisi", fillcolor="#CFFAFE", color="#67E8F9"];
+  e [label="Établissement\nCohortes et exercices\nAccompagnement autorisé", fillcolor="#DCFCE7", color="#86EFAC"];
+  r [label="Recruteur\nCampagne et grille métier\nRevue humaine et recours", fillcolor="#EDE9FE", color="#C4B5FD"];
+  proof [label="Preuves avant extension\nUtilité • financement • coût\nFiabilité • droits • accès", fillcolor="#DBEAFE", color="#93C5FD"];
+  geo [label="Déploiement progressif\nBurkina Faso → Mali / Niger\nPilote et dossier par pays"];
+  p -> cycle;
+  cycle -> c;
+  cycle -> e;
+  cycle -> r;
+  c -> proof;
+  e -> proof;
+  r -> proof;
+  proof -> geo;
+}

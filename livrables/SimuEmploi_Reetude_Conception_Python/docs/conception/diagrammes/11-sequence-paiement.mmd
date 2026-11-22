@@ -1,0 +1,24 @@
+sequenceDiagram
+    actor C as Acheteur
+    participant A as API
+    participant P as Prestataire
+    participant D as PostgreSQL
+    C->>A: Choisir une offre
+    A->>A: Lire prix et volume cote serveur
+    A->>D: Creer achat en attente
+    A->>P: Initialiser paiement avec reference
+    P-->>C: Parcours de paiement
+    P->>A: Webhook avec evenement fournisseur
+    A->>A: Verifier signature ou confirmation fournisseur
+    A->>D: Transaction evenement unique et statut d'achat
+    alt Paiement confirme et non credite
+        A->>D: Credit unique dans le registre
+    else Evenement deja traite
+        D-->>A: Aucun nouvel effet
+    else Statut incertain ou conflit
+        A->>D: Mettre en rapprochement
+    end
+    A-->>P: Accuse de traitement
+    C->>A: Lire le statut d'achat
+    A-->>C: Statut confirme ou en rapprochement
+    Note over C,A: La redirection navigateur ne prouve pas le paiement

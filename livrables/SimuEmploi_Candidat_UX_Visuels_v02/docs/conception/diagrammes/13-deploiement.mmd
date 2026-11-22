@@ -1,0 +1,26 @@
+flowchart TB
+    U[Smartphones et ordinateurs] --> EDGE[HTTPS et ressources web publiques]
+    subgraph Z[Environnement autorise et contractualise]
+        EDGE --> API[Instances FastAPI et Uvicorn]
+        API --> DB[(PostgreSQL prive : donnees, travaux et outbox)]
+        DB --> DIS[Dispatcher outbox prive]
+        DIS -->|Publication confirmee| MQ[RabbitMQ prive]
+        MQ --> WK[Workers Python Celery prives]
+        WK --> DB
+        API --> OBS[Metriques et logs minimaux]
+        WK --> OBS
+        DIS --> OBS
+        MQ --> OBS
+        DB --> BK[(Sauvegardes chiffrees et restauration)]
+        API --> OBJ[(Objets prives facultatifs)]
+    end
+    API --> ID[Identite externe autorisee]
+    API --> PAY[Paiement local]
+    WK --> AI[IA et transcription autorisees]
+    WK --> MAIL[Notifications minimales]
+    OPS[Exploitation avec acces controles] --> OBS
+    OPS --> BK
+    CI[CI : tests, migrations revues et image versionnee] --> API
+    CI --> WK
+    CI --> DIS
+    note[Emplacement et disponibilite verifies par contrat, y compris logs et backups] -.-> Z

@@ -1,0 +1,141 @@
+{
+  "typecheckDiagnostics": 0,
+  "itemTypeInBrokenCopyHandler": "any",
+  "strictEnabled": false,
+  "reactTypesDeclared": false,
+  "dependencyReproduction": "Installation pnpm avec plages package.json; bun.lock non appliqué. Ces résultats ne valident pas la reproduction exacte du lock original.",
+  "versions": [
+    {
+      "package": "@google/genai",
+      "declared": "^2.4.0",
+      "archiveLock": "@google/genai@2.15.0",
+      "installed": "2.32.0"
+    },
+    {
+      "package": "@tailwindcss/vite",
+      "declared": "^4.1.14",
+      "archiveLock": "@tailwindcss/vite@4.3.3",
+      "installed": "4.3.5"
+    },
+    {
+      "package": "@types/canvas-confetti",
+      "declared": "^1.9.0",
+      "archiveLock": "@types/canvas-confetti@1.9.0",
+      "installed": "1.9.0"
+    },
+    {
+      "package": "@types/pdfkit",
+      "declared": "^0.17.6",
+      "archiveLock": "@types/pdfkit@0.17.6",
+      "installed": "0.17.7"
+    },
+    {
+      "package": "@vitejs/plugin-react",
+      "declared": "^5.0.4",
+      "archiveLock": "@vitejs/plugin-react@5.2.0",
+      "installed": "5.2.0"
+    },
+    {
+      "package": "canvas-confetti",
+      "declared": "^1.9.4",
+      "archiveLock": "canvas-confetti@1.9.4",
+      "installed": "1.9.4"
+    },
+    {
+      "package": "dotenv",
+      "declared": "^17.2.3",
+      "archiveLock": "dotenv@17.4.2",
+      "installed": "17.4.2"
+    },
+    {
+      "package": "express",
+      "declared": "^4.21.2",
+      "archiveLock": "express@4.22.2",
+      "installed": "4.22.3"
+    },
+    {
+      "package": "lucide-react",
+      "declared": "^0.546.0",
+      "archiveLock": "lucide-react@0.546.0",
+      "installed": "0.546.0"
+    },
+    {
+      "package": "motion",
+      "declared": "^12.23.24",
+      "archiveLock": "motion@12.43.0",
+      "installed": "12.43.0"
+    },
+    {
+      "package": "pdfkit",
+      "declared": "^0.19.1",
+      "archiveLock": "pdfkit@0.19.1",
+      "installed": "0.19.1"
+    },
+    {
+      "package": "react",
+      "declared": "^19.0.1",
+      "archiveLock": "react@19.2.8",
+      "installed": "19.3.1"
+    },
+    {
+      "package": "react-dom",
+      "declared": "^19.0.1",
+      "archiveLock": "react-dom@19.2.8",
+      "installed": "19.3.1"
+    },
+    {
+      "package": "recharts",
+      "declared": "^3.10.1",
+      "archiveLock": "recharts@3.10.1",
+      "installed": "3.11.0"
+    },
+    {
+      "package": "vite",
+      "declared": "^6.2.3",
+      "archiveLock": "vite@6.4.3",
+      "installed": "6.4.6"
+    },
+    {
+      "package": "@types/node",
+      "declared": "^22.14.0",
+      "archiveLock": "@types/node@22.20.1",
+      "installed": "22.20.5"
+    },
+    {
+      "package": "autoprefixer",
+      "declared": "^10.4.21",
+      "archiveLock": "autoprefixer@10.5.4",
+      "installed": "10.6.2"
+    },
+    {
+      "package": "esbuild",
+      "declared": "^0.25.0",
+      "archiveLock": "esbuild@0.25.12",
+      "installed": "0.25.12"
+    },
+    {
+      "package": "tailwindcss",
+      "declared": "^4.1.14",
+      "archiveLock": "tailwindcss@4.3.3",
+      "installed": "4.3.5"
+    },
+    {
+      "package": "tsx",
+      "declared": "^4.21.0",
+      "archiveLock": "tsx@4.23.1",
+      "installed": "4.23.15"
+    },
+    {
+      "package": "typescript",
+      "declared": "~5.8.2",
+      "archiveLock": "typescript@5.8.3",
+      "installed": "5.8.3"
+    },
+    {
+      "package": "@types/express",
+      "declared": "^4.17.21",
+      "archiveLock": "@types/express@4.17.25",
+      "installed": "4.17.25"
+    }
+  ]
+}

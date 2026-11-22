@@ -1,0 +1,104 @@
+[
+  {
+    "visibility": "published",
+    "scenario": {
+      "id": "11111111-1111-4111-8111-111111111111",
+      "slug": "premier-entretien-stage",
+      "version": 1,
+      "title": "Préparer mon premier entretien de stage",
+      "summary": "Parler de votre motivation et d’un projet vécu, même sans expérience professionnelle.",
+      "objective": "internship",
+      "domain": "beginner",
+      "estimated_minutes": 12,
+      "question_count": 5,
+      "preparation": [
+        "Choisissez un stage ou un domaine qui vous intéresse.",
+        "Pensez à un projet scolaire, associatif, personnel ou à une activité informelle.",
+        "Vous pourrez répondre avec vos mots ; aucune caméra ne sera nécessaire."
+      ],
+      "questions": [
+        {"key":"motivation","prompt":"Quel stage recherchez-vous et qu’aimeriez-vous apprendre pendant ce stage ?","guidance":["Nommez le domaine qui vous intéresse.","Expliquez une raison concrète.","Donnez un objectif d’apprentissage."],"criteria":["relevance","clarity"]},
+        {"key":"project","prompt":"Racontez un projet ou une activité où vous avez contribué à un résultat utile.","guidance":["Situez le projet.","Décrivez votre contribution personnelle.","Expliquez ce qui en est sorti."],"criteria":["concrete_example","clarity"]},
+        {"key":"learning","prompt":"On vous confie une tâche que vous ne connaissez pas encore. Comment vous y prendriez-vous ?","guidance":["Expliquez comment comprendre la demande.","Indiquez quand demander de l’aide.","Précisez comment vérifier votre travail."],"criteria":["relevance","clarity"]},
+        {"key":"deadline","prompt":"Comment vous organiseriez-vous pour rendre un travail à la date prévue ?","guidance":["Décomposez le travail.","Expliquez vos priorités.","Prévoyez quoi faire en cas de difficulté."],"criteria":["relevance","concrete_example"]},
+        {"key":"question","prompt":"Quelle question aimeriez-vous poser à la personne qui vous reçoit pour ce stage ?","guidance":["Choisissez une question utile pour comprendre le stage.","Expliquez pourquoi cette information vous aiderait."],"criteria":["relevance","clarity"]}
+      ],
+      "rubric": [
+        {"key":"relevance","label":"Répondre à la question","description":"La réponse apporte des éléments liés à la demande, sans exiger une expérience salariée passée."},
+        {"key":"clarity","label":"Se faire comprendre","description":"Les idées et la démarche sont compréhensibles ; le vocabulaire prestigieux ne constitue pas un critère."},
+        {"key":"concrete_example","label":"S’appuyer sur un exemple","description":"L’exemple précise le contexte et la contribution réellement décrite, sans inventer un parcours."}
+      ]
+    }
+  },
+  {
+    "visibility": "published",
+    "scenario": {
+      "id": "22222222-2222-4222-8222-222222222222",
+      "slug": "premier-emploi",
+      "version": 1,
+      "title": "Préparer mon premier entretien d’emploi",
+      "summary": "Relier ce que vous savez faire aux besoins d’un poste et expliquer votre manière d’apprendre.",
+      "objective": "first_job",
+      "domain": "beginner",
+      "estimated_minutes": 15,
+      "question_count": 5,
+      "preparation": ["Choisissez un poste concret ou une famille de métiers.","Identifiez une activité qui montre une compétence utile.","Préparez une question sur les missions du poste."],
+      "questions": [
+        {"key":"interest","prompt":"Qu’est-ce qui vous attire dans ce poste et que pensez-vous pouvoir y apporter ?","guidance":["Reliez votre intérêt à une mission.","Appuyez votre contribution sur une expérience ou un apprentissage réel."],"criteria":["relevance","clarity"]},
+        {"key":"strength","prompt":"Décrivez une activité où vous avez utilisé une compétence utile pour ce poste.","guidance":["Expliquez le contexte.","Dites ce que vous avez fait vous-même.","Décrivez le résultat ou l’apprentissage."],"criteria":["concrete_example","clarity"]},
+        {"key":"difficulty","prompt":"Comment réagiriez-vous si vous rencontriez une difficulté pendant vos premières semaines ?","guidance":["Expliquez comment repérer la difficulté.","Précisez comment en parler et chercher une solution."],"criteria":["relevance","clarity"]},
+        {"key":"team","prompt":"Racontez une situation où vous avez travaillé avec d’autres personnes.","guidance":["Présentez l’objectif commun.","Expliquez votre rôle.","Indiquez comment vous avez coordonné le travail."],"criteria":["concrete_example","relevance"]},
+        {"key":"first_steps","prompt":"Que voudriez-vous comprendre en priorité en arrivant dans ce poste ?","guidance":["Identifiez une mission ou une règle de travail.","Expliquez comment cette information vous aiderait."],"criteria":["relevance","clarity"]}
+      ],
+      "rubric": [
+        {"key":"relevance","label":"Relier sa réponse au poste","description":"Les éléments répondent à la question et aux missions envisagées."},
+        {"key":"clarity","label":"Expliquer sa démarche","description":"La personne rend ses idées et ses étapes compréhensibles, sans appréciation de son accent ou de sa personnalité."},
+        {"key":"concrete_example","label":"Décrire une contribution","description":"Les éléments concrets appartiennent à l’exemple donné et peuvent venir d’activités scolaires, personnelles ou informelles."}
+      ]
+    }
+  },
+  {
+    "visibility": "published",
+    "scenario": {
+      "id": "33333333-3333-4333-8333-333333333333",
+      "slug": "me-presenter",
+      "version": 1,
+      "title": "Me présenter avec un exemple",
+      "summary": "Construire une présentation courte de votre parcours et de votre prochain objectif.",
+      "objective": "first_job",
+      "domain": "presentation",
+      "estimated_minutes": 10,
+      "question_count": 5,
+      "preparation": ["Notez votre objectif actuel.","Choisissez une expérience dont vous pouvez expliquer votre rôle.","Gardez des phrases simples et vos propres mots."],
+      "questions": [
+        {"key":"introduction","prompt":"Comment présenteriez-vous votre parcours et ce que vous recherchez aujourd’hui ?","guidance":["Situez votre parcours.","Nommez votre prochain objectif."],"criteria":["clarity","relevance"]},
+        {"key":"example","prompt":"Quel exemple aide à comprendre un savoir-faire que vous souhaitez mettre en avant ?","guidance":["Donnez un contexte concret.","Expliquez votre contribution."],"criteria":["concrete_example","clarity"]},
+        {"key":"learning","prompt":"Qu’avez-vous appris de cette expérience ?","guidance":["Nommez un apprentissage.","Expliquez comment vous pourriez le réutiliser."],"criteria":["relevance","clarity"]},
+        {"key":"goal","prompt":"Quel lien faites-vous entre cet apprentissage et le stage ou l’emploi recherché ?","guidance":["Identifiez une mission.","Expliquez le lien avec votre apprentissage."],"criteria":["relevance","concrete_example"]},
+        {"key":"next_step","prompt":"Quelle idée souhaitez-vous que la personne retienne de votre présentation ?","guidance":["Choisissez une idée précise.","Résumez-la simplement."],"criteria":["clarity","relevance"]}
+      ],
+      "rubric": [
+        {"key":"relevance","label":"Exprimer un objectif","description":"Le lien entre parcours et prochain objectif est expliqué."},
+        {"key":"clarity","label":"Organiser ses idées","description":"Les idées sont compréhensibles et suivent une structure utile."},
+        {"key":"concrete_example","label":"Illustrer avec son parcours","description":"Un exemple réellement décrit appuie la présentation ; aucun détail de parcours n’est inventé."}
+      ]
+    }
+  },
+  {
+    "visibility": "draft",
+    "scenario": {
+      "id": "44444444-4444-4444-8444-444444444444",
+      "slug": "exercice-non-publie",
+      "version": 1,
+      "title": "Brouillon réservé aux vérifications",
+      "summary": "Ce brouillon ne doit apparaître ni dans le catalogue ni par accès direct.",
+      "objective": "internship",
+      "domain": "beginner",
+      "estimated_minutes": 5,
+      "question_count": 1,
+      "preparation": ["Exemple technique non public."],
+      "questions": [{"key":"draft","prompt":"Question de brouillon.","guidance":["Non public."],"criteria":["clarity"]}],
+      "rubric": [{"key":"clarity","label":"Clarté","description":"Critère de test."}]
+    }
+  }
+]

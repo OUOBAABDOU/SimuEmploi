@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SimuEmploi — atelier de clôture S0</title><link rel="stylesheet" href="atelier.css"></head>
+<body>
+<header><div><p class="eyebrow">SimuEmploi · référence S0-0.4</p><h1>Terminer la revue de S0</h1>
+<p>Corpus, choix IA/API, parcours, essais candidats et affectation de l’équipe.</p></div><span class="badge">Réception humaine à renseigner</span></header>
+<main><div class="notice"><strong>Atelier local de relecture.</strong> Aucun compte ni envoi serveur. Vos saisies restent dans cette page jusqu’à l’export et peuvent être perdues à la fermeture. Les maquettes et leurs résultats sont fictifs. Une séance de test automatique ne compte pas comme un essai avec une personne.</div>
+<div class="card"><h2>Les changements à relire</h2><p>Après une réponse confirmée, la question suivante s’appuie sur la question effectivement posée et sur cette réponse. La banque donne les questions de départ et les axes à travailler. Limites proposées : 5 axes, jusqu’à 7 questions, au plus 2 relances.</p><p>Réponse conservée, question suivante prête et retour pédagogique prêt sont trois états distincts. Plusieurs API/IA peuvent assurer des capacités différentes, avec des règles de données, de délai et de coût. Les fournisseurs de l’exemple sont désactivés.</p><div class="links"><a href="07_ENTRETIEN_ADAPTATIF_ET_MULTI_IA.md" target="_blank" rel="noopener">Lire les contrats adaptatifs et multi-IA</a><a href="08_IMPACTS_ET_CAPACITE.md" target="_blank" rel="noopener">Voir les impacts et les 120 h par sprint</a></div></div>
+<div class="tools"><a class="button" href="maquettes/candidat.html" target="_blank" rel="noopener">Ouvrir la maquette candidat</a>
+<a class="button secondary" href="09_FOURNISSEURS_IA_ET_UTILISATION_API.md" target="_blank" rel="noopener">Comprendre les fournisseurs et API</a>
+<a class="button secondary" href="maquettes/medias.html" target="_blank" rel="noopener">Voir la référence audio/vidéo</a>
+<button id="export" class="secondary">Exporter les preuves JSON</button><label class="import">Reprendre un fichier <input id="import" type="file" accept=".json,application/json"></label></div>
+<p id="message" role="status" aria-live="polite"></p>
+<nav aria-label="Étapes de la revue"><button data-panel="corpus" aria-current="page">1. Questions</button><button data-panel="api">2. IA et API</button><button data-panel="team">3. Responsables</button><button data-panel="tests">4. Essais réels</button><button data-panel="review">5. Réception</button></nav>
+<section id="corpus" class="panel"></section>
+<section id="api" class="panel" hidden>
+<h2>Relire le choix IA et l’utilisation des API</h2>
+<p id="api-plan" class="notice"></p>
+<p>AgentRouter serait l’intermédiaire ; le modèle choisi produirait une proposition. SimuEmploi garderait le contrôle de l’entretien, des données et des dépenses. Les maquettes ci-dessous fonctionnent sans appel IA.</p>
+<article class="card"><h3>Exemple fictif de question adaptative</h3>
+<dl class="api-example"><dt>Question posée</dt><dd>Quelle expérience pourrait vous aider dans ce premier stage ?</dd><dt>Réponse confirmée</dt><dd>J’ai aidé mon oncle à tenir un cahier de ventes.</dd><dt>Relance à évaluer</dt><dd>Comment vous assuriez-vous que les ventes étaient correctement enregistrées ?</dd></dl>
+<p>La relance doit s’appuyer sur la réponse. Une expérience scolaire, associative ou informelle peut servir d’exemple. La sortie IA sera vérifiée avant affichage.</p></article>
+<article class="card"><h3>Parcours d’un appel dans le futur backend Python</h3>
+<ol class="api-flow"><li><strong>Conserver</strong><br>FastAPI confirme la réponse dans PostgreSQL.</li><li><strong>Préparer</strong><br>Un worker charge le contexte utile et appelle la passerelle interne.</li><li><strong>Proposer</strong><br>L’adaptateur contacte AgentRouter avec la clé du serveur.</li><li><strong>Vérifier</strong><br>Le backend valide puis fige la question acceptée.</li></ol>
+<p>Une panne IA ne doit pas faire perdre la réponse confirmée. Actualiser l’écran ne doit pas multiplier les appels. La clé reste côté serveur.</p></article>
+<article class="card"><h3>Ce que la relecture doit préciser</h3>
+<ul><li>Premier périmètre : prochaine question, puis évaluation et rapport texte selon qualification.</li><li>Offre et accès API autorisés pour le backend et le public Burkina Faso puis AES.</li><li>Modèle, route et format de réponse réellement disponibles ; paramètres et erreurs à vérifier.</li><li>Budget et délai : valeurs à fixer avant les essais connectés ; aucune gratuité durable présumée.</li><li>Données : destinataires, conservation et suppression à approuver avant collecte réelle.</li><li>Secours : un modèle différent chez le même routeur reste dépendant de ce routeur ; l’accès indépendant doit être qualifié.</li></ul>
+<p>Le choix du premier candidat ne vaut ni qualification de l’API, ni approbation du corpus, ni réception finale de S0. L’audio et la vidéo nécessiteront des capacités séparées.</p>
+<div class="links"><a href="10_EVALUATION_AGENTROUTER.md" target="_blank" rel="noopener">Lire l’évaluation AgentRouter</a><a href="09_FOURNISSEURS_IA_ET_UTILISATION_API.md" target="_blank" rel="noopener">Lire les contrats et exemples API</a></div>
+<button data-panel="review" data-focus="decisions_review.notes">Consigner mon avis sur les contrats</button></article>
+</section>
+<section id="team" class="panel" hidden></section>
+<section id="tests" class="panel" hidden></section><section id="review" class="panel" hidden></section>
+<footer>Les avis et observations doivent être saisis par les personnes responsables après lecture ou séance réelle. Les documents antérieurs et la première application restent conservés.</footer></main>
+<script id="review-data" type="application/json">__S0_DATA__</script><script src="atelier.js"></script>
+</body></html>

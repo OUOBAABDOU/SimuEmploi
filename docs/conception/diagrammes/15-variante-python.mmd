@@ -1,0 +1,17 @@
+flowchart TB
+    U[Candidats, formateurs et recruteurs] --> W[Frontend React et TypeScript]
+    W <--> L[(IndexedDB : reprise locale)]
+    W -->|HTTPS et contrat OpenAPI| API[FastAPI et Pydantic]
+    API --> AUTH[Identite OIDC et droits metier]
+    API --> ORM[SQLAlchemy et transactions]
+    ORM --> DB[(PostgreSQL : reponses, etats, usage et outbox)]
+    DB --> DIS[Dispatcher outbox]
+    DIS -->|Publication confirmee| MQ[Broker RabbitMQ]
+    MQ --> WK[Worker Python Celery]
+    WK --> DB
+    WK --> AI[Adaptateur IA et transcription]
+    AI --> EXT[Fournisseur autorise]
+    API --> PAY[Paiement local verifie]
+    API --> OBJ[(Stockage prive facultatif)]
+    API --> OBS[Supervision et budgets]
+    WK --> OBS

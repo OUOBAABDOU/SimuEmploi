@@ -1,0 +1,820 @@
+{
+  "corpus": [
+    {
+      "id": "11111111-1111-4111-8111-111111111111",
+      "slug": "premier-entretien-stage",
+      "version": 3,
+      "title": "Préparer mon premier entretien de stage",
+      "summary": "Parler de votre motivation et d’un projet vécu, même sans expérience professionnelle.",
+      "objective": "internship",
+      "domain": "beginner",
+      "estimated_minutes": 12,
+      "question_count": 5,
+      "preparation": [
+        "Choisissez un stage ou un domaine qui vous intéresse.",
+        "Pensez à un projet scolaire, associatif, personnel ou à une activité informelle.",
+        "Vous pourrez répondre avec vos mots ; aucune caméra ne sera nécessaire."
+      ],
+      "questions": [
+        {
+          "key": "motivation",
+          "prompt": "Quel stage recherchez-vous et qu’aimeriez-vous apprendre pendant ce stage ?",
+          "guidance": [
+            "Nommez le domaine qui vous intéresse.",
+            "Expliquez une raison concrète.",
+            "Donnez un objectif d’apprentissage."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "explanation"
+        },
+        {
+          "key": "project",
+          "prompt": "Racontez un projet ou une activité où vous avez contribué à un résultat utile.",
+          "guidance": [
+            "Situez le projet.",
+            "Décrivez votre contribution personnelle.",
+            "Expliquez ce qui en est sorti."
+          ],
+          "criteria": [
+            "concrete_example",
+            "clarity"
+          ],
+          "response_kind": "real_example"
+        },
+        {
+          "key": "learning",
+          "prompt": "On vous confie une tâche que vous ne connaissez pas encore. Comment vous y prendriez-vous ?",
+          "guidance": [
+            "Expliquez comment comprendre la demande.",
+            "Indiquez quand demander de l’aide.",
+            "Précisez comment vérifier votre travail."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "hypothetical_approach"
+        },
+        {
+          "key": "deadline",
+          "prompt": "Comment vous organiseriez-vous pour rendre un travail à la date prévue ?",
+          "guidance": [
+            "Décomposez le travail.",
+            "Expliquez vos priorités.",
+            "Prévoyez quoi faire en cas de difficulté."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "hypothetical_approach"
+        },
+        {
+          "key": "question",
+          "prompt": "Quelle question aimeriez-vous poser à la personne qui vous reçoit pour ce stage ?",
+          "guidance": [
+            "Choisissez une question utile pour comprendre le stage.",
+            "Expliquez pourquoi cette information vous aiderait."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "explanation"
+        }
+      ],
+      "rubric": [
+        {
+          "key": "relevance",
+          "label": "Répondre à la question",
+          "description": "La réponse apporte des éléments liés à la demande, sans exiger une expérience salariée passée."
+        },
+        {
+          "key": "clarity",
+          "label": "Se faire comprendre",
+          "description": "Les idées et la démarche sont compréhensibles ; le vocabulaire prestigieux ne constitue pas un critère."
+        },
+        {
+          "key": "concrete_example",
+          "label": "S’appuyer sur un exemple",
+          "description": "L’exemple précise le contexte et la contribution réellement décrite, sans inventer un parcours."
+        }
+      ],
+      "content_status": "example_pending_review",
+      "review_status": "technical_review_complete_human_review_pending",
+      "review_version": "S0-0.4",
+      "questions_role": "initial_question_and_reference_bank_not_fixed_sequence",
+      "interview_policy": {
+        "version": 1,
+        "mode": "adaptive",
+        "main_axes": 5,
+        "max_questions": 7,
+        "max_clarifications": 2,
+        "first_question_key": "motivation",
+        "context_required": [
+          "previous_question",
+          "previous_answer"
+        ],
+        "question_snapshot_required": true
+      }
+    },
+    {
+      "id": "22222222-2222-4222-8222-222222222222",
+      "slug": "premier-emploi",
+      "version": 3,
+      "title": "Préparer mon premier entretien d’emploi",
+      "summary": "Relier ce que vous savez faire aux besoins d’un poste et expliquer votre manière d’apprendre.",
+      "objective": "first_job",
+      "domain": "beginner",
+      "estimated_minutes": 15,
+      "question_count": 5,
+      "preparation": [
+        "Choisissez un poste concret ou une famille de métiers.",
+        "Identifiez une activité qui montre une compétence utile.",
+        "Préparez une question sur les missions du poste."
+      ],
+      "questions": [
+        {
+          "key": "interest",
+          "prompt": "Qu’est-ce qui vous attire dans ce poste et que pensez-vous pouvoir y apporter ?",
+          "guidance": [
+            "Reliez votre intérêt à une mission.",
+            "Appuyez votre contribution sur une expérience ou un apprentissage réel."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "explanation"
+        },
+        {
+          "key": "strength",
+          "prompt": "Décrivez une activité où vous avez utilisé une compétence utile pour ce poste.",
+          "guidance": [
+            "Expliquez le contexte.",
+            "Dites ce que vous avez fait vous-même.",
+            "Décrivez le résultat ou l’apprentissage."
+          ],
+          "criteria": [
+            "concrete_example",
+            "clarity"
+          ],
+          "response_kind": "real_example"
+        },
+        {
+          "key": "difficulty",
+          "prompt": "Comment réagiriez-vous si vous rencontriez une difficulté pendant vos premières semaines ?",
+          "guidance": [
+            "Expliquez comment repérer la difficulté.",
+            "Précisez comment en parler et chercher une solution."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "hypothetical_approach"
+        },
+        {
+          "key": "team",
+          "prompt": "Racontez une situation où vous avez travaillé avec d’autres personnes.",
+          "guidance": [
+            "Présentez l’objectif commun.",
+            "Expliquez votre rôle.",
+            "Indiquez comment vous avez coordonné le travail."
+          ],
+          "criteria": [
+            "concrete_example",
+            "relevance"
+          ],
+          "response_kind": "real_example"
+        },
+        {
+          "key": "first_steps",
+          "prompt": "Que voudriez-vous comprendre en priorité en arrivant dans ce poste ?",
+          "guidance": [
+            "Identifiez une mission ou une règle de travail.",
+            "Expliquez comment cette information vous aiderait."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "explanation"
+        }
+      ],
+      "rubric": [
+        {
+          "key": "relevance",
+          "label": "Relier sa réponse au poste",
+          "description": "Les éléments répondent à la question et aux missions envisagées."
+        },
+        {
+          "key": "clarity",
+          "label": "Expliquer sa démarche",
+          "description": "La personne rend ses idées et ses étapes compréhensibles, sans appréciation de son accent ou de sa personnalité."
+        },
+        {
+          "key": "concrete_example",
+          "label": "Décrire une contribution",
+          "description": "Les éléments concrets appartiennent à l’exemple donné et peuvent venir d’activités scolaires, personnelles ou informelles."
+        }
+      ],
+      "content_status": "example_pending_review",
+      "review_status": "technical_review_complete_human_review_pending",
+      "review_version": "S0-0.4",
+      "questions_role": "initial_question_and_reference_bank_not_fixed_sequence",
+      "interview_policy": {
+        "version": 1,
+        "mode": "adaptive",
+        "main_axes": 5,
+        "max_questions": 7,
+        "max_clarifications": 2,
+        "first_question_key": "interest",
+        "context_required": [
+          "previous_question",
+          "previous_answer"
+        ],
+        "question_snapshot_required": true
+      }
+    },
+    {
+      "id": "33333333-3333-4333-8333-333333333333",
+      "slug": "me-presenter",
+      "version": 3,
+      "title": "Me présenter avec un exemple",
+      "summary": "Construire une présentation courte de votre parcours et de votre prochain objectif.",
+      "objective": "first_job",
+      "domain": "presentation",
+      "estimated_minutes": 10,
+      "question_count": 5,
+      "preparation": [
+        "Notez votre objectif actuel.",
+        "Choisissez une expérience dont vous pouvez expliquer votre rôle.",
+        "Gardez des phrases simples et vos propres mots."
+      ],
+      "questions": [
+        {
+          "key": "introduction",
+          "prompt": "Comment présenteriez-vous votre parcours et ce que vous recherchez aujourd’hui ?",
+          "guidance": [
+            "Situez votre parcours.",
+            "Nommez votre prochain objectif."
+          ],
+          "criteria": [
+            "clarity",
+            "relevance"
+          ],
+          "response_kind": "explanation"
+        },
+        {
+          "key": "example",
+          "prompt": "Quel exemple aide à comprendre un savoir-faire que vous souhaitez mettre en avant ?",
+          "guidance": [
+            "Donnez un contexte concret.",
+            "Expliquez votre contribution."
+          ],
+          "criteria": [
+            "concrete_example",
+            "clarity"
+          ],
+          "response_kind": "real_example"
+        },
+        {
+          "key": "learning",
+          "prompt": "Qu’avez-vous appris de cette expérience ?",
+          "guidance": [
+            "Nommez un apprentissage.",
+            "Expliquez comment vous pourriez le réutiliser."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "explanation"
+        },
+        {
+          "key": "goal",
+          "prompt": "Quel lien faites-vous entre cet apprentissage et le stage ou l’emploi recherché ?",
+          "guidance": [
+            "Identifiez une mission.",
+            "Expliquez le lien avec votre apprentissage."
+          ],
+          "criteria": [
+            "relevance",
+            "clarity"
+          ],
+          "response_kind": "explanation"
+        },
+        {
+          "key": "next_step",
+          "prompt": "Quelle idée souhaitez-vous que la personne retienne de votre présentation ?",
+          "guidance": [
+            "Choisissez une idée précise.",
+            "Résumez-la simplement."
+          ],
+          "criteria": [
+            "clarity",
+            "relevance"
+          ],
+          "response_kind": "explanation"
+        }
+      ],
+      "rubric": [
+        {
+          "key": "relevance",
+          "label": "Exprimer un objectif",
+          "description": "Le lien entre parcours et prochain objectif est expliqué."
+        },
+        {
+          "key": "clarity",
+          "label": "Organiser ses idées",
+          "description": "Les idées sont compréhensibles et suivent une structure utile."
+        },
+        {
+          "key": "concrete_example",
+          "label": "Illustrer avec son parcours",
+          "description": "Un exemple réellement décrit appuie la présentation ; aucun détail de parcours n’est inventé."
+        }
+      ],
+      "content_status": "example_pending_review",
+      "review_status": "technical_review_complete_human_review_pending",
+      "review_version": "S0-0.4",
+      "questions_role": "initial_question_and_reference_bank_not_fixed_sequence",
+      "interview_policy": {
+        "version": 1,
+        "mode": "adaptive",
+        "main_axes": 5,
+        "max_questions": 7,
+        "max_clarifications": 2,
+        "first_question_key": "introduction",
+        "context_required": [
+          "previous_question",
+          "previous_answer"
+        ],
+        "question_snapshot_required": true
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "instruction": "Expliquez avec vos mots à quoi sert SimuEmploi et sa limite."
+    },
+    {
+      "id": "T02",
+      "instruction": "Choisissez un exercice pour un premier stage ou emploi."
+    },
+    {
+      "id": "T03",
+      "instruction": "Préparez puis saisissez une réponse fictive et trouvez l’aide."
+    },
+    {
+      "id": "T04",
+      "instruction": "Pendant une coupure simulée, expliquez où se trouve votre brouillon."
+    },
+    {
+      "id": "T05",
+      "instruction": "Faites une pause, revenez à l’accueil puis retrouvez la réponse."
+    },
+    {
+      "id": "T06",
+      "instruction": "Expliquez la différence entre réponse conservée et retour indisponible."
+    },
+    {
+      "id": "T07",
+      "instruction": "Lisez un rapport partiel et choisissez un point à retravailler."
+    },
+    {
+      "id": "T08",
+      "instruction": "Trouvez la demande de suppression puis annulez-la."
+    },
+    {
+      "id": "T09",
+      "instruction": "Observez le lien de la question suivante avec la question et votre réponse précédentes."
+    },
+    {
+      "id": "T10",
+      "instruction": "Si la question suivante est indisponible, retrouvez votre réponse et la possibilité de réessayer."
+    }
+  ],
+  "evidence": {
+    "schema_version": "S0-0.4",
+    "reference_version": "S0-0.4",
+    "responsible_product": "OUOBA Abdou Rasmané",
+    "responsible_business_review": "OUOBA Abdou Rasmané",
+    "team_coordinator": "OUOBA Abdou Rasmané",
+    "nomination_source": "Réponse du porteur dans ce chat, 22 novembre 2026",
+    "candidate_sessions_possible": true,
+    "nomination_note": "Ouoba, Abdou, Rasmané, limata, Oumou affectés D1–D5 ; 24 h chacun. Les trois banques v3, la conception S0-0.4 et le backlog sont approuvés. Le coordinateur confirme les cinq périmètres le 22/11/2026. Les essais candidats et la réception finale restent à recevoir.",
+    "developers": {
+      "D1": {
+        "name": "Ouoba",
+        "scope_acknowledged": true,
+        "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+        "availability_hours_per_sprint": 24,
+        "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+        "scope_confirmed_at": "2026-11-22",
+        "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+        "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+      },
+      "D2": {
+        "name": "Abdou",
+        "scope_acknowledged": true,
+        "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+        "availability_hours_per_sprint": 24,
+        "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+        "scope_confirmed_at": "2026-11-22",
+        "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+        "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+      },
+      "D3": {
+        "name": "Rasmané",
+        "scope_acknowledged": true,
+        "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+        "availability_hours_per_sprint": 24,
+        "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+        "scope_confirmed_at": "2026-11-22",
+        "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+        "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+      },
+      "D4": {
+        "name": "limata",
+        "scope_acknowledged": true,
+        "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+        "availability_hours_per_sprint": 24,
+        "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+        "scope_confirmed_at": "2026-11-22",
+        "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+        "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+      },
+      "D5": {
+        "name": "Oumou",
+        "scope_acknowledged": true,
+        "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+        "availability_hours_per_sprint": 24,
+        "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+        "scope_confirmed_at": "2026-11-22",
+        "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+        "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+      }
+    },
+    "business_reviews": [
+      {
+        "scenario_id": "11111111-1111-4111-8111-111111111111",
+        "scenario_version": 3,
+        "reviewer": "OUOBA Abdou Rasmané",
+        "reviewed_at": "2026-11-22",
+        "verdict": "approved",
+        "notes": "Approbation explicite reçue pour « Préparer mon premier entretien de stage », banque version 3 / S0-0.4 : questions, aides, critères et limites adaptatives. Réponse : « J’approuve les trois banques après lecture ». Ne qualifie pas les sorties futures d’un modèle IA."
+      },
+      {
+        "scenario_id": "22222222-2222-4222-8222-222222222222",
+        "scenario_version": 3,
+        "reviewer": "OUOBA Abdou Rasmané",
+        "reviewed_at": "2026-11-22",
+        "verdict": "approved",
+        "notes": "Approbation explicite reçue pour « Préparer mon premier entretien d’emploi », banque version 3 / S0-0.4 : questions, aides, critères et limites adaptatives. Réponse : « J’approuve les trois banques après lecture ». Ne qualifie pas les sorties futures d’un modèle IA."
+      },
+      {
+        "scenario_id": "33333333-3333-4333-8333-333333333333",
+        "scenario_version": 3,
+        "reviewer": "OUOBA Abdou Rasmané",
+        "reviewed_at": "2026-11-22",
+        "verdict": "approved",
+        "notes": "Approbation explicite reçue pour « Me présenter avec un exemple », banque version 3 / S0-0.4 : questions, aides, critères et limites adaptatives. Réponse : « J’approuve les trois banques après lecture ». Ne qualifie pas les sorties futures d’un modèle IA."
+      }
+    ],
+    "participant_sessions": [],
+    "findings": [],
+    "product_review": {
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": "pending",
+      "notes": "Référence de conception et trois banques approuvées le 22/11/2026. La demande de modifications fournisseurs/API est traitée dans cette référence approuvée. Cet avis final attend les séances réelles, les corrections et leur examen ; aucune réception de S0 n’est déclarée."
+    },
+    "decisions_review": {
+      "reviewer": "OUOBA Abdou Rasmané",
+      "reviewed_at": "2026-11-22",
+      "verdict": "approved",
+      "notes": "Approbation explicite de la référence de conception S0-0.4 : étape IA/API et document Parcours et contrats. Réponse reçue : « J’approuve cette référence de conception après lecture ». AgentRouter est le premier candidat à qualifier ; l’offre, le modèle, le budget et la politique de données restent ouverts jusqu’à qualification. Les appels sont inactifs ; les essais candidats, le backlog/capacité et la réception finale ne sont pas approuvés par cet avis."
+    },
+    "backlog_review": {
+      "reviewer": "OUOBA Abdou Rasmané",
+      "reviewed_at": "2026-11-22",
+      "verdict": "approved",
+      "notes": "Réponse « tout est bon » à la question sur les confirmations des cinq périmètres et les ajustements du backlog S0 estimé, après échange avec l’équipe. Aucun ajustement demandé. Estimation de référence : 59 h réparties D1 8 h, D2 13 h, D3 11 h, D4 15 h, D5 12 h, sous capacité de 24 h chacun / 120 h brutes par sprint. Ce sont des estimations acceptées, pas des heures consommées ni une garantie de date. Les corrections issues des essais seront réestimées si nécessaire."
+    },
+    "history": [
+      {
+        "id": "2026-11-22-team-and-revision",
+        "date": "2026-11-22",
+        "source": "Réponses directes du porteur aux deux questions de relecture et d’affectation",
+        "developer_names_received": [
+          "Ouoba",
+          "Abdou",
+          "Rasmané",
+          "limata",
+          "Oumou"
+        ],
+        "assignment_rule": "Ordre de la liste, D1 à D5",
+        "product_feedback_received": "modifications préciser a apporter",
+        "previous_product_review": {
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        }
+      },
+      {
+        "id": "2026-11-22-adaptive-multi-provider-24h",
+        "date": "2026-11-22",
+        "previous_reference": "S0-0.3",
+        "previous_reviews": {
+          "business_reviews": [
+            {
+              "scenario_id": "11111111-1111-4111-8111-111111111111",
+              "scenario_version": 2,
+              "reviewer": "",
+              "reviewed_at": "",
+              "verdict": "pending",
+              "notes": ""
+            },
+            {
+              "scenario_id": "22222222-2222-4222-8222-222222222222",
+              "scenario_version": 2,
+              "reviewer": "",
+              "reviewed_at": "",
+              "verdict": "pending",
+              "notes": ""
+            },
+            {
+              "scenario_id": "33333333-3333-4333-8333-333333333333",
+              "scenario_version": 2,
+              "reviewer": "",
+              "reviewed_at": "",
+              "verdict": "pending",
+              "notes": ""
+            }
+          ],
+          "product_review": {
+            "reviewer": "OUOBA Abdou Rasmané",
+            "reviewed_at": "2026-11-22",
+            "verdict": "revise",
+            "notes": "Avis global reçu dans ce chat : « modifications préciser a apporter ». Une demande de modifications est enregistrée ; les points concernés et le résultat attendu restent à préciser. Aucun scénario ou contrat n’est déclaré approuvé par cet avis."
+          },
+          "decisions_review": {
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          },
+          "backlog_review": {
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          }
+        },
+        "requested_changes": [
+          "La prochaine question dépend de la question et de la réponse précédentes.",
+          "Plusieurs API ou fournisseurs IA peuvent être utilisés dans l’ensemble du projet."
+        ],
+        "availability_confirmed": "24 heures par développeur et par sprint de deux semaines",
+        "source": "Réponses directes du porteur dans ce chat, clarification 24 h confirmée par « 1 »"
+      },
+      {
+        "id": "2026-11-22-reference04-revision-request",
+        "date": "2026-11-22",
+        "reference_version": "S0-0.4",
+        "source": "Réponse directe du porteur à la question de relecture S0-0.4 dans ce chat",
+        "reply_received": "Je demande des modifications, que je précise",
+        "previous_product_review": {
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        },
+        "requested_changes_details": null
+      },
+      {
+        "id": "2026-11-22-reference04-api-clarification",
+        "date": "2026-11-22",
+        "reference_version": "S0-0.4",
+        "source": "Réponse directe du porteur dans ce chat à la demande de précisions",
+        "reply_received": "c'est par rapport au fournisseur d'IA et comment utilise les API",
+        "previous_product_review": {
+          "reviewer": "OUOBA Abdou Rasmané",
+          "reviewed_at": "2026-11-22",
+          "verdict": "revise",
+          "notes": "Demande reçue dans ce chat : « Je demande des modifications, que je précise ». Les éléments concernés et le résultat attendu restent à recevoir. Aucune modification précise, approbation métier ou validation de contrat n’est déduite de cet avis."
+        },
+        "requested_changes_details": "Préciser les fournisseurs IA et l’utilisation des API",
+        "supplier_choice_received": null,
+        "budget_received": null
+      },
+      {
+        "id": "2026-11-22-agentrouter-priority-and-test-plan",
+        "date": "2026-11-22",
+        "source": "Deux réponses directes du porteur dans ce chat",
+        "api_reply_received": "AgentRouter comme premier candidat à qualifier (recommandé)",
+        "test_date_reply_received": "22/11/2026",
+        "scope": "Priorité de qualification texte et date prévue de la première boucle de trois essais ; aucun résultat ni avis de réception reçu.",
+        "previous_routing_proposal": {
+          "next_question": {
+            "primary_candidate": "openai_direct",
+            "fallback_candidate": "mistral_direct"
+          },
+          "evaluate_answer": {
+            "primary_candidate": "openai_direct",
+            "fallback_candidate": "mistral_direct"
+          },
+          "build_report": {
+            "primary_candidate": "openai_direct",
+            "fallback_candidate": "mistral_direct"
+          },
+          "transcribe_audio": {
+            "primary_candidate": null,
+            "fallback_candidate": null
+          },
+          "synthesize_speech": {
+            "primary_candidate": null,
+            "fallback_candidate": null
+          },
+          "realtime_dialogue": {
+            "primary_candidate": null,
+            "fallback_candidate": null
+          }
+        },
+        "previous_external_router_variant": {
+          "candidate": "OpenRouter",
+          "selected": false,
+          "enabled": false,
+          "allowed_upstreams": [],
+          "allow_fallback_outside_allowlist": false,
+          "require_all_request_parameters": true,
+          "data_policy_approved": false,
+          "internal_attempts_observable": false
+        },
+        "previous_product_review": {
+          "reviewer": "OUOBA Abdou Rasmané",
+          "reviewed_at": "2026-11-22",
+          "verdict": "revise",
+          "notes": "Modifications demandées sur S0-0.4 ; le porteur précise qu’elles concernent les fournisseurs IA et l’utilisation des API. L’addendum API-0.1 présente une proposition à relire. Aucun fournisseur, modèle ou budget n’est reçu comme choix approuvé ; aucune relecture métier ni réception n’est inventée."
+        }
+      },
+      {
+        "id": "2026-11-22-business-and-design-approved",
+        "date": "2026-11-22",
+        "source": "Deux réponses directes du porteur dans ce chat",
+        "business_reply_received": "J’approuve les trois banques après lecture",
+        "design_reply_received": "J’approuve cette référence de conception après lecture",
+        "reference_version": "S0-0.4",
+        "addendum_version": "API-0.1",
+        "scope": "Trois banques v3 avec aides, critères et limites adaptatives ; référence de conception IA/API et parcours/contrats. Offre, modèle, budget et politique de données encore ouverts. Aucun avis sur les essais ou réception finale n’est reçu.",
+        "previous_business_reviews": [
+          {
+            "scenario_id": "11111111-1111-4111-8111-111111111111",
+            "scenario_version": 3,
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          },
+          {
+            "scenario_id": "22222222-2222-4222-8222-222222222222",
+            "scenario_version": 3,
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          },
+          {
+            "scenario_id": "33333333-3333-4333-8333-333333333333",
+            "scenario_version": 3,
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          }
+        ],
+        "previous_decisions_review": {
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        },
+        "previous_product_review": {
+          "reviewer": "OUOBA Abdou Rasmané",
+          "reviewed_at": "2026-11-22",
+          "verdict": "revise",
+          "notes": "Les modifications fournisseurs/API ont donné lieu à l’addendum API-0.1 et à l’étude AgentRouter. Le porteur confirme AgentRouter comme premier candidat à qualifier pour le texte et prévoit trois essais le 22/11/2026. L’offre, le modèle, le budget et la politique de données restent ouverts. Aucune approbation globale, relecture métier ou séance réalisée n’est déduite."
+        }
+      },
+      {
+        "id": "2026-11-22-team-scopes-and-backlog-confirmed",
+        "date": "2026-11-22",
+        "source": "Réponse directe du porteur dans ce chat : tout est bon",
+        "question_scope": "Après échange avec les cinq développeurs : confirmation de leurs périmètres et ajustements demandés au backlog S0 estimé.",
+        "reply_received": "tout est bon",
+        "interpretation": "Périmètres D1–D5 et backlog confirmés par le coordinateur, sans ajustement demandé. Aucun résultat d’essai ni réception finale.",
+        "previous_developers": {
+          "D1": {
+            "name": "Ouoba",
+            "scope_acknowledged": false,
+            "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+            "availability_hours_per_sprint": 24,
+            "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+          },
+          "D2": {
+            "name": "Abdou",
+            "scope_acknowledged": false,
+            "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+            "availability_hours_per_sprint": 24,
+            "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+          },
+          "D3": {
+            "name": "Rasmané",
+            "scope_acknowledged": false,
+            "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+            "availability_hours_per_sprint": 24,
+            "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+          },
+          "D4": {
+            "name": "limata",
+            "scope_acknowledged": false,
+            "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+            "availability_hours_per_sprint": 24,
+            "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+          },
+          "D5": {
+            "name": "Oumou",
+            "scope_acknowledged": false,
+            "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+            "availability_hours_per_sprint": 24,
+            "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+          }
+        },
+        "previous_backlog_review": {
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        }
+      }
+    ],
+    "review_addendum": "API-0.1",
+    "api_qualification_plan": {
+      "primary_candidate": "agentrouter_external",
+      "candidate_label": "AgentRouter",
+      "candidate_priority_confirmed": true,
+      "decision_by": "OUOBA Abdou Rasmané",
+      "decision_date": "2026-11-22",
+      "candidate_capabilities": [
+        "next_question",
+        "evaluate_answer",
+        "build_report"
+      ],
+      "qualification_status": "not_started",
+      "approved_endpoint": null,
+      "model_id": null,
+      "budget": null,
+      "data_policy_approved": false,
+      "execution_enabled": false
+    },
+    "candidate_test_plan": {
+      "planned_date": "2026-11-22",
+      "target_participants": 3,
+      "status": "awaiting_candidate_availability",
+      "status_confirmed_at": "2026-11-22",
+      "status_source": "Réponse directe du porteur : Pas de candidat disponible pour le moment",
+      "status_history": [
+        {
+          "date": "2026-11-22",
+          "previous_status": "not_yet_conducted",
+          "reply_received": "Pas de candidat disponible pour le moment",
+          "scope": "Disponibilité pour une séance guidée ; aucun participant ni résultat créé."
+        },
+        {
+          "date": "2026-11-22",
+          "previous_status": "planned_no_observations_received",
+          "reply_received": "Pas encore réalisés",
+          "scope": "Statut des trois essais prévus ; aucune séance ni nouvelle date déclarée."
+        }
+      ],
+      "planning_source": "Réponse directe du porteur : 22/11/2026",
+      "notes": "Les dates observées et résultats seront saisis après les séances réelles."
+    },
+    "design_review": {
+      "reviewer": "OUOBA Abdou Rasmané",
+      "reviewed_at": "2026-11-22",
+      "verdict": "approved",
+      "notes": "Approbation explicite de la référence de conception S0-0.4 : étape IA/API et document Parcours et contrats. Réponse reçue : « J’approuve cette référence de conception après lecture ». AgentRouter est le premier candidat à qualifier ; l’offre, le modèle, le budget et la politique de données restent ouverts jusqu’à qualification. Les appels sont inactifs ; les essais candidats, le backlog/capacité et la réception finale ne sont pas approuvés par cet avis.",
+      "reference_version": "S0-0.4",
+      "addendum_version": "API-0.1",
+      "source": "Réponse directe du porteur dans ce chat le 22 novembre 2026"
+    }
+  }
+}

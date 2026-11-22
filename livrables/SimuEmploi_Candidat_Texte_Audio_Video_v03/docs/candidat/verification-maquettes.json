@@ -1,0 +1,43 @@
+{
+  "version": "0.2",
+  "nature": "Contrôle de maquettes locales ; aucune application ni API testée",
+  "screens": 12,
+  "variants": 2,
+  "layoutChecks": 96,
+  "degradedStateChecks": 30,
+  "images": "Décodage et présence des alternatives contrôlés sur les écrans",
+  "browserErrors": [],
+  "widths": [
+    320,
+    360,
+    736,
+    1024
+  ],
+  "interactions": [
+    "navigation",
+    "nouvel essai sans réponse imposée",
+    "validation locale et focus",
+    "coupure réseau",
+    "reprise depuis accueil avec texte conservé en mémoire",
+    "relecture finale en lecture seule et reprise du retour",
+    "confirmation avant remplacement du brouillon de démonstration",
+    "question suivante",
+    "retour explicitement fictif",
+    "signalement simulé",
+    "rapport partiel",
+    "annulation suppression et retour du focus",
+    "confidentialité ouvrable",
+    "filtre vide et réinitialisation",
+    "question et aide selon exercice"
+  ],
+  "screenshots": [
+    "accueil-guide-desktop.png",
+    "simulation-guide-mobile.png",
+    "accueil-autonome-desktop.png",
+    "rapport-partiel-mobile.png",
+    "decouverte-mobile.png",
+    "catalogue-illustre-desktop.png",
+    "fin-session-mobile.png",
+    "accueil-guide-sombre.png"
+  ]
+}

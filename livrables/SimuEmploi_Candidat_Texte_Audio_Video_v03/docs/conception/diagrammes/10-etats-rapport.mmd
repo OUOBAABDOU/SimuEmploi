@@ -1,0 +1,13 @@
+stateDiagram-v2
+    [*] --> EnAttente
+    EnAttente --> EnGeneration: travail revendique
+    EnGeneration --> Pret: controles satisfaits
+    EnGeneration --> Partiel: certaines analyses disponibles
+    EnGeneration --> Indisponible: echec sans resultat utilisable
+    Indisponible --> EnAttente: reprise autorisee et bornee
+    Partiel --> EnAttente: completer dans une nouvelle revision
+    Pret --> [*]
+    note right of Indisponible
+        Reponses conservees.
+        Aucune note de secours fictive.
+    end note

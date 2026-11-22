@@ -1,0 +1,20 @@
+{
+  "scope": "Exemples calculés à partir des expressions du code; aucun test de navigateur ou appel IA.",
+  "fillerWords": {
+    "sourceLine": "const regex = new RegExp(`\\\\b${filler}\\\\b`, \"gi\");",
+    "regexSource": "\\beuh\\b",
+    "input": "euh je cherche un emploi euh",
+    "expectedOccurrences": 2,
+    "actualOccurrences": 2
+  },
+  "wpmExamples": {
+    "noWords": 90,
+    "fourWordsArrivingTogetherAfter10ms": 190,
+    "fourWordsAfter60s": 90
+  },
+  "audioRecording": {
+    "cameraRequestAudio": false,
+    "recorderInput": "videoStream",
+    "consequence": "Le flux enregistré ne comporte pas de piste microphone dans ce parcours."
+  }
+}

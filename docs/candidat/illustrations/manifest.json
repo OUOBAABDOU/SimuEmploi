@@ -1,0 +1,69 @@
+{
+  "origin": "Scènes originales dessinées pour les maquettes ; aucune photographie ni génération IA",
+  "assets": [
+    {
+      "name": "preparer",
+      "theme": "clair",
+      "file": "preparer-clair.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 9114
+    },
+    {
+      "name": "preparer",
+      "theme": "sombre",
+      "file": "preparer-sombre.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 8352
+    },
+    {
+      "name": "commerce",
+      "theme": "clair",
+      "file": "commerce-clair.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 8794
+    },
+    {
+      "name": "commerce",
+      "theme": "sombre",
+      "file": "commerce-sombre.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 8234
+    },
+    {
+      "name": "organiser",
+      "theme": "clair",
+      "file": "organiser-clair.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 8754
+    },
+    {
+      "name": "organiser",
+      "theme": "sombre",
+      "file": "organiser-sombre.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 8298
+    },
+    {
+      "name": "progresser",
+      "theme": "clair",
+      "file": "progresser-clair.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 9250
+    },
+    {
+      "name": "progresser",
+      "theme": "sombre",
+      "file": "progresser-sombre.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 8280
+    }
+  ]
+}

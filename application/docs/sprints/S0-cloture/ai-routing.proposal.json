@@ -1,0 +1,154 @@
+{
+  "reference_version": "S0-0.4",
+  "addendum_version": "API-0.1",
+  "status": "proposal_pending_review",
+  "execution_enabled": false,
+  "selection_authority": "OUOBA Abdou Rasmané après qualification et validation des données/coûts",
+  "providers": [
+    {
+      "id": "openai_direct",
+      "vendor": "OpenAI",
+      "adapter_protocol": "openai_responses",
+      "candidate_capabilities": [
+        "next_question",
+        "evaluate_answer",
+        "build_report"
+      ],
+      "enabled": false,
+      "qualified_capabilities": [],
+      "model_id": null,
+      "secret_reference": null,
+      "data_policy_approved": false,
+      "account_access_verified": false
+    },
+    {
+      "id": "mistral_direct",
+      "vendor": "Mistral",
+      "adapter_protocol": "mistral_chat",
+      "candidate_capabilities": [
+        "next_question",
+        "evaluate_answer",
+        "build_report"
+      ],
+      "enabled": false,
+      "qualified_capabilities": [],
+      "model_id": null,
+      "secret_reference": null,
+      "data_policy_approved": false,
+      "account_access_verified": false
+    },
+    {
+      "id": "anthropic_direct",
+      "vendor": "Anthropic",
+      "adapter_protocol": "anthropic_messages",
+      "candidate_capabilities": [
+        "next_question",
+        "evaluate_answer",
+        "build_report"
+      ],
+      "enabled": false,
+      "qualified_capabilities": [],
+      "model_id": null,
+      "secret_reference": null,
+      "data_policy_approved": false,
+      "account_access_verified": false
+    },
+    {
+      "id": "gemini_direct",
+      "vendor": "Google",
+      "adapter_protocol": "gemini_interactions",
+      "candidate_capabilities": [
+        "next_question",
+        "evaluate_answer",
+        "build_report"
+      ],
+      "enabled": false,
+      "qualified_capabilities": [],
+      "model_id": null,
+      "secret_reference": null,
+      "data_policy_approved": false,
+      "account_access_verified": false
+    },
+    {
+      "id": "agentrouter_external",
+      "vendor": "AgentRouter",
+      "adapter_protocol": "chat_completions_compatibility_to_verify",
+      "status": "prioritized_for_qualification",
+      "candidate_capabilities": [
+        "next_question",
+        "evaluate_answer",
+        "build_report"
+      ],
+      "enabled": false,
+      "qualified_capabilities": [],
+      "approved_endpoint": null,
+      "model_id": null,
+      "secret_reference": null,
+      "data_policy_approved": false,
+      "account_access_verified": false
+    }
+  ],
+  "routing_proposal": {
+    "next_question": {
+      "primary_candidate": "agentrouter_external",
+      "fallback_candidate": "mistral_direct"
+    },
+    "evaluate_answer": {
+      "primary_candidate": "agentrouter_external",
+      "fallback_candidate": "mistral_direct"
+    },
+    "build_report": {
+      "primary_candidate": "agentrouter_external",
+      "fallback_candidate": "mistral_direct"
+    },
+    "transcribe_audio": {
+      "primary_candidate": null,
+      "fallback_candidate": null
+    },
+    "synthesize_speech": {
+      "primary_candidate": null,
+      "fallback_candidate": null
+    },
+    "realtime_dialogue": {
+      "primary_candidate": null,
+      "fallback_candidate": null
+    }
+  },
+  "required_before_execution": [
+    "account_access",
+    "supported_service_countries",
+    "model_and_sdk_version",
+    "capability_qualification",
+    "approved_endpoint",
+    "secret_reference",
+    "approved_data_policy",
+    "price_unit_and_rate",
+    "application_budget",
+    "global_deadline",
+    "retry_control",
+    "operations_owner"
+  ],
+  "operation_limits_proposed": {
+    "max_total_upstream_attempts": 2,
+    "sdk_automatic_retries": 0,
+    "deadline_seconds": null,
+    "cost_ceiling": null,
+    "currency": null,
+    "count_intermediary_attempts": true
+  },
+  "external_router_variant": {
+    "candidate": "AgentRouter",
+    "selected": false,
+    "enabled": false,
+    "allowed_upstreams": [],
+    "allow_fallback_outside_allowlist": false,
+    "require_all_request_parameters": true,
+    "data_policy_approved": false,
+    "internal_attempts_observable": false,
+    "prioritized_for_qualification": true,
+    "account_offer_confirmed": false,
+    "status": "candidate_priority_confirmed_service_not_qualified"
+  },
+  "production_configuration_complete": false,
+  "candidate_priority_source": "AgentRouter prioritaire pour qualification texte, réponse du porteur du 22/11/2026"
+}

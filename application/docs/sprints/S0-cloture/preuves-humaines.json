@@ -1,0 +1,417 @@
+{
+  "schema_version": "S0-0.4",
+  "reference_version": "S0-0.4",
+  "responsible_product": "OUOBA Abdou Rasmané",
+  "responsible_business_review": "OUOBA Abdou Rasmané",
+  "team_coordinator": "OUOBA Abdou Rasmané",
+  "nomination_source": "Réponse du porteur dans ce chat, 22 novembre 2026",
+  "candidate_sessions_possible": true,
+  "nomination_note": "Ouoba, Abdou, Rasmané, limata, Oumou affectés D1–D5 ; 24 h chacun. Les trois banques v3, la conception S0-0.4 et le backlog sont approuvés. Le coordinateur confirme les cinq périmètres le 22/11/2026. Les essais candidats et la réception finale restent à recevoir.",
+  "developers": {
+    "D1": {
+      "name": "Ouoba",
+      "scope_acknowledged": true,
+      "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+      "availability_hours_per_sprint": 24,
+      "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+      "scope_confirmed_at": "2026-11-22",
+      "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+      "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+    },
+    "D2": {
+      "name": "Abdou",
+      "scope_acknowledged": true,
+      "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+      "availability_hours_per_sprint": 24,
+      "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+      "scope_confirmed_at": "2026-11-22",
+      "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+      "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+    },
+    "D3": {
+      "name": "Rasmané",
+      "scope_acknowledged": true,
+      "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+      "availability_hours_per_sprint": 24,
+      "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+      "scope_confirmed_at": "2026-11-22",
+      "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+      "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+    },
+    "D4": {
+      "name": "limata",
+      "scope_acknowledged": true,
+      "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+      "availability_hours_per_sprint": 24,
+      "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+      "scope_confirmed_at": "2026-11-22",
+      "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+      "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+    },
+    "D5": {
+      "name": "Oumou",
+      "scope_acknowledged": true,
+      "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+      "availability_hours_per_sprint": 24,
+      "availability_source": "24 h par développeur par sprint, confirmé dans ce chat",
+      "scope_confirmed_at": "2026-11-22",
+      "scope_confirmation_by": "OUOBA Abdou Rasmané, coordinateur",
+      "scope_confirmation_source": "Confirmation rapportée par le coordinateur dans ce chat : tout est bon"
+    }
+  },
+  "business_reviews": [
+    {
+      "scenario_id": "11111111-1111-4111-8111-111111111111",
+      "scenario_version": 3,
+      "reviewer": "OUOBA Abdou Rasmané",
+      "reviewed_at": "2026-11-22",
+      "verdict": "approved",
+      "notes": "Approbation explicite reçue pour « Préparer mon premier entretien de stage », banque version 3 / S0-0.4 : questions, aides, critères et limites adaptatives. Réponse : « J’approuve les trois banques après lecture ». Ne qualifie pas les sorties futures d’un modèle IA."
+    },
+    {
+      "scenario_id": "22222222-2222-4222-8222-222222222222",
+      "scenario_version": 3,
+      "reviewer": "OUOBA Abdou Rasmané",
+      "reviewed_at": "2026-11-22",
+      "verdict": "approved",
+      "notes": "Approbation explicite reçue pour « Préparer mon premier entretien d’emploi », banque version 3 / S0-0.4 : questions, aides, critères et limites adaptatives. Réponse : « J’approuve les trois banques après lecture ». Ne qualifie pas les sorties futures d’un modèle IA."
+    },
+    {
+      "scenario_id": "33333333-3333-4333-8333-333333333333",
+      "scenario_version": 3,
+      "reviewer": "OUOBA Abdou Rasmané",
+      "reviewed_at": "2026-11-22",
+      "verdict": "approved",
+      "notes": "Approbation explicite reçue pour « Me présenter avec un exemple », banque version 3 / S0-0.4 : questions, aides, critères et limites adaptatives. Réponse : « J’approuve les trois banques après lecture ». Ne qualifie pas les sorties futures d’un modèle IA."
+    }
+  ],
+  "participant_sessions": [],
+  "findings": [],
+  "product_review": {
+    "reviewer": "",
+    "reviewed_at": "",
+    "verdict": "pending",
+    "notes": "Référence de conception et trois banques approuvées le 22/11/2026. La demande de modifications fournisseurs/API est traitée dans cette référence approuvée. Cet avis final attend les séances réelles, les corrections et leur examen ; aucune réception de S0 n’est déclarée."
+  },
+  "decisions_review": {
+    "reviewer": "OUOBA Abdou Rasmané",
+    "reviewed_at": "2026-11-22",
+    "verdict": "approved",
+    "notes": "Approbation explicite de la référence de conception S0-0.4 : étape IA/API et document Parcours et contrats. Réponse reçue : « J’approuve cette référence de conception après lecture ». AgentRouter est le premier candidat à qualifier ; l’offre, le modèle, le budget et la politique de données restent ouverts jusqu’à qualification. Les appels sont inactifs ; les essais candidats, le backlog/capacité et la réception finale ne sont pas approuvés par cet avis."
+  },
+  "backlog_review": {
+    "reviewer": "OUOBA Abdou Rasmané",
+    "reviewed_at": "2026-11-22",
+    "verdict": "approved",
+    "notes": "Réponse « tout est bon » à la question sur les confirmations des cinq périmètres et les ajustements du backlog S0 estimé, après échange avec l’équipe. Aucun ajustement demandé. Estimation de référence : 59 h réparties D1 8 h, D2 13 h, D3 11 h, D4 15 h, D5 12 h, sous capacité de 24 h chacun / 120 h brutes par sprint. Ce sont des estimations acceptées, pas des heures consommées ni une garantie de date. Les corrections issues des essais seront réestimées si nécessaire."
+  },
+  "history": [
+    {
+      "id": "2026-11-22-team-and-revision",
+      "date": "2026-11-22",
+      "source": "Réponses directes du porteur aux deux questions de relecture et d’affectation",
+      "developer_names_received": [
+        "Ouoba",
+        "Abdou",
+        "Rasmané",
+        "limata",
+        "Oumou"
+      ],
+      "assignment_rule": "Ordre de la liste, D1 à D5",
+      "product_feedback_received": "modifications préciser a apporter",
+      "previous_product_review": {
+        "reviewer": "",
+        "reviewed_at": "",
+        "verdict": "pending",
+        "notes": ""
+      }
+    },
+    {
+      "id": "2026-11-22-adaptive-multi-provider-24h",
+      "date": "2026-11-22",
+      "previous_reference": "S0-0.3",
+      "previous_reviews": {
+        "business_reviews": [
+          {
+            "scenario_id": "11111111-1111-4111-8111-111111111111",
+            "scenario_version": 2,
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          },
+          {
+            "scenario_id": "22222222-2222-4222-8222-222222222222",
+            "scenario_version": 2,
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          },
+          {
+            "scenario_id": "33333333-3333-4333-8333-333333333333",
+            "scenario_version": 2,
+            "reviewer": "",
+            "reviewed_at": "",
+            "verdict": "pending",
+            "notes": ""
+          }
+        ],
+        "product_review": {
+          "reviewer": "OUOBA Abdou Rasmané",
+          "reviewed_at": "2026-11-22",
+          "verdict": "revise",
+          "notes": "Avis global reçu dans ce chat : « modifications préciser a apporter ». Une demande de modifications est enregistrée ; les points concernés et le résultat attendu restent à préciser. Aucun scénario ou contrat n’est déclaré approuvé par cet avis."
+        },
+        "decisions_review": {
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        },
+        "backlog_review": {
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        }
+      },
+      "requested_changes": [
+        "La prochaine question dépend de la question et de la réponse précédentes.",
+        "Plusieurs API ou fournisseurs IA peuvent être utilisés dans l’ensemble du projet."
+      ],
+      "availability_confirmed": "24 heures par développeur et par sprint de deux semaines",
+      "source": "Réponses directes du porteur dans ce chat, clarification 24 h confirmée par « 1 »"
+    },
+    {
+      "id": "2026-11-22-reference04-revision-request",
+      "date": "2026-11-22",
+      "reference_version": "S0-0.4",
+      "source": "Réponse directe du porteur à la question de relecture S0-0.4 dans ce chat",
+      "reply_received": "Je demande des modifications, que je précise",
+      "previous_product_review": {
+        "reviewer": "",
+        "reviewed_at": "",
+        "verdict": "pending",
+        "notes": ""
+      },
+      "requested_changes_details": null
+    },
+    {
+      "id": "2026-11-22-reference04-api-clarification",
+      "date": "2026-11-22",
+      "reference_version": "S0-0.4",
+      "source": "Réponse directe du porteur dans ce chat à la demande de précisions",
+      "reply_received": "c'est par rapport au fournisseur d'IA et comment utilise les API",
+      "previous_product_review": {
+        "reviewer": "OUOBA Abdou Rasmané",
+        "reviewed_at": "2026-11-22",
+        "verdict": "revise",
+        "notes": "Demande reçue dans ce chat : « Je demande des modifications, que je précise ». Les éléments concernés et le résultat attendu restent à recevoir. Aucune modification précise, approbation métier ou validation de contrat n’est déduite de cet avis."
+      },
+      "requested_changes_details": "Préciser les fournisseurs IA et l’utilisation des API",
+      "supplier_choice_received": null,
+      "budget_received": null
+    },
+    {
+      "id": "2026-11-22-agentrouter-priority-and-test-plan",
+      "date": "2026-11-22",
+      "source": "Deux réponses directes du porteur dans ce chat",
+      "api_reply_received": "AgentRouter comme premier candidat à qualifier (recommandé)",
+      "test_date_reply_received": "22/11/2026",
+      "scope": "Priorité de qualification texte et date prévue de la première boucle de trois essais ; aucun résultat ni avis de réception reçu.",
+      "previous_routing_proposal": {
+        "next_question": {
+          "primary_candidate": "openai_direct",
+          "fallback_candidate": "mistral_direct"
+        },
+        "evaluate_answer": {
+          "primary_candidate": "openai_direct",
+          "fallback_candidate": "mistral_direct"
+        },
+        "build_report": {
+          "primary_candidate": "openai_direct",
+          "fallback_candidate": "mistral_direct"
+        },
+        "transcribe_audio": {
+          "primary_candidate": null,
+          "fallback_candidate": null
+        },
+        "synthesize_speech": {
+          "primary_candidate": null,
+          "fallback_candidate": null
+        },
+        "realtime_dialogue": {
+          "primary_candidate": null,
+          "fallback_candidate": null
+        }
+      },
+      "previous_external_router_variant": {
+        "candidate": "OpenRouter",
+        "selected": false,
+        "enabled": false,
+        "allowed_upstreams": [],
+        "allow_fallback_outside_allowlist": false,
+        "require_all_request_parameters": true,
+        "data_policy_approved": false,
+        "internal_attempts_observable": false
+      },
+      "previous_product_review": {
+        "reviewer": "OUOBA Abdou Rasmané",
+        "reviewed_at": "2026-11-22",
+        "verdict": "revise",
+        "notes": "Modifications demandées sur S0-0.4 ; le porteur précise qu’elles concernent les fournisseurs IA et l’utilisation des API. L’addendum API-0.1 présente une proposition à relire. Aucun fournisseur, modèle ou budget n’est reçu comme choix approuvé ; aucune relecture métier ni réception n’est inventée."
+      }
+    },
+    {
+      "id": "2026-11-22-business-and-design-approved",
+      "date": "2026-11-22",
+      "source": "Deux réponses directes du porteur dans ce chat",
+      "business_reply_received": "J’approuve les trois banques après lecture",
+      "design_reply_received": "J’approuve cette référence de conception après lecture",
+      "reference_version": "S0-0.4",
+      "addendum_version": "API-0.1",
+      "scope": "Trois banques v3 avec aides, critères et limites adaptatives ; référence de conception IA/API et parcours/contrats. Offre, modèle, budget et politique de données encore ouverts. Aucun avis sur les essais ou réception finale n’est reçu.",
+      "previous_business_reviews": [
+        {
+          "scenario_id": "11111111-1111-4111-8111-111111111111",
+          "scenario_version": 3,
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        },
+        {
+          "scenario_id": "22222222-2222-4222-8222-222222222222",
+          "scenario_version": 3,
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        },
+        {
+          "scenario_id": "33333333-3333-4333-8333-333333333333",
+          "scenario_version": 3,
+          "reviewer": "",
+          "reviewed_at": "",
+          "verdict": "pending",
+          "notes": ""
+        }
+      ],
+      "previous_decisions_review": {
+        "reviewer": "",
+        "reviewed_at": "",
+        "verdict": "pending",
+        "notes": ""
+      },
+      "previous_product_review": {
+        "reviewer": "OUOBA Abdou Rasmané",
+        "reviewed_at": "2026-11-22",
+        "verdict": "revise",
+        "notes": "Les modifications fournisseurs/API ont donné lieu à l’addendum API-0.1 et à l’étude AgentRouter. Le porteur confirme AgentRouter comme premier candidat à qualifier pour le texte et prévoit trois essais le 22/11/2026. L’offre, le modèle, le budget et la politique de données restent ouverts. Aucune approbation globale, relecture métier ou séance réalisée n’est déduite."
+      }
+    },
+    {
+      "id": "2026-11-22-team-scopes-and-backlog-confirmed",
+      "date": "2026-11-22",
+      "source": "Réponse directe du porteur dans ce chat : tout est bon",
+      "question_scope": "Après échange avec les cinq développeurs : confirmation de leurs périmètres et ajustements demandés au backlog S0 estimé.",
+      "reply_received": "tout est bon",
+      "interpretation": "Périmètres D1–D5 et backlog confirmés par le coordinateur, sans ajustement demandé. Aucun résultat d’essai ni réception finale.",
+      "previous_developers": {
+        "D1": {
+          "name": "Ouoba",
+          "scope_acknowledged": false,
+          "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+          "availability_hours_per_sprint": 24,
+          "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+        },
+        "D2": {
+          "name": "Abdou",
+          "scope_acknowledged": false,
+          "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+          "availability_hours_per_sprint": 24,
+          "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+        },
+        "D3": {
+          "name": "Rasmané",
+          "scope_acknowledged": false,
+          "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+          "availability_hours_per_sprint": 24,
+          "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+        },
+        "D4": {
+          "name": "limata",
+          "scope_acknowledged": false,
+          "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+          "availability_hours_per_sprint": 24,
+          "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+        },
+        "D5": {
+          "name": "Oumou",
+          "scope_acknowledged": false,
+          "nomination_source": "Liste du porteur dans ce chat, 22 novembre 2026 ; affectation dans l’ordre D1 à D5.",
+          "availability_hours_per_sprint": 24,
+          "availability_source": "24 h par développeur par sprint, confirmé dans ce chat"
+        }
+      },
+      "previous_backlog_review": {
+        "reviewer": "",
+        "reviewed_at": "",
+        "verdict": "pending",
+        "notes": ""
+      }
+    }
+  ],
+  "review_addendum": "API-0.1",
+  "api_qualification_plan": {
+    "primary_candidate": "agentrouter_external",
+    "candidate_label": "AgentRouter",
+    "candidate_priority_confirmed": true,
+    "decision_by": "OUOBA Abdou Rasmané",
+    "decision_date": "2026-11-22",
+    "candidate_capabilities": [
+      "next_question",
+      "evaluate_answer",
+      "build_report"
+    ],
+    "qualification_status": "not_started",
+    "approved_endpoint": null,
+    "model_id": null,
+    "budget": null,
+    "data_policy_approved": false,
+    "execution_enabled": false
+  },
+  "candidate_test_plan": {
+    "planned_date": "2026-11-22",
+    "target_participants": 3,
+    "status": "awaiting_candidate_availability",
+    "status_confirmed_at": "2026-11-22",
+    "status_source": "Réponse directe du porteur : Pas de candidat disponible pour le moment",
+    "status_history": [
+      {
+        "date": "2026-11-22",
+        "previous_status": "not_yet_conducted",
+        "reply_received": "Pas de candidat disponible pour le moment",
+        "scope": "Disponibilité pour une séance guidée ; aucun participant ni résultat créé."
+      },
+      {
+        "date": "2026-11-22",
+        "previous_status": "planned_no_observations_received",
+        "reply_received": "Pas encore réalisés",
+        "scope": "Statut des trois essais prévus ; aucune séance ni nouvelle date déclarée."
+      }
+    ],
+    "planning_source": "Réponse directe du porteur : 22/11/2026",
+    "notes": "Les dates observées et résultats seront saisis après les séances réelles."
+  },
+  "design_review": {
+    "reviewer": "OUOBA Abdou Rasmané",
+    "reviewed_at": "2026-11-22",
+    "verdict": "approved",
+    "notes": "Approbation explicite de la référence de conception S0-0.4 : étape IA/API et document Parcours et contrats. Réponse reçue : « J’approuve cette référence de conception après lecture ». AgentRouter est le premier candidat à qualifier ; l’offre, le modèle, le budget et la politique de données restent ouverts jusqu’à qualification. Les appels sont inactifs ; les essais candidats, le backlog/capacité et la réception finale ne sont pas approuvés par cet avis.",
+    "reference_version": "S0-0.4",
+    "addendum_version": "API-0.1",
+    "source": "Réponse directe du porteur dans ce chat le 22 novembre 2026"
+  }
+}

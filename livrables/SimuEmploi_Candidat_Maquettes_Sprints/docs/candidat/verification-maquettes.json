@@ -1,0 +1,30 @@
+{
+  "nature": "Contrôle de maquettes locales ; aucune application ni API testée",
+  "screens": 12,
+  "variants": 2,
+  "layoutChecks": 96,
+  "browserErrors": [],
+  "widths": [
+    320,
+    360,
+    736,
+    1024
+  ],
+  "interactions": [
+    "navigation",
+    "validation locale",
+    "coupure réseau",
+    "pause/reprise",
+    "relecture finale en lecture seule",
+    "question suivante",
+    "rapport partiel",
+    "annulation suppression"
+  ],
+  "screenshots": [
+    "accueil-guide-desktop.png",
+    "simulation-guide-mobile.png",
+    "accueil-autonome-desktop.png",
+    "rapport-partiel-mobile.png",
+    "accueil-guide-sombre.png"
+  ]
+}

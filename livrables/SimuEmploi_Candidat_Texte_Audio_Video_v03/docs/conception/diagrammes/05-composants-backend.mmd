@@ -1,0 +1,24 @@
+flowchart TB
+    HTTP[Routes FastAPI et contrats Pydantic] --> AUTH[Identite, droits et contexte de requete]
+    AUTH --> SIM[Service Simulation]
+    AUTH --> EDU[Service Etablissements]
+    AUTH --> REC[Service Recrutement]
+    AUTH --> SHR[Service Partage et droits des donnees]
+    AUTH --> BILL[Service Consommation et paiement]
+    SIM --> REF[Scenarios et grilles versionnes]
+    SIM --> EVA[Evaluation et rapports]
+    EVA --> JOB[Orchestration des travaux]
+    EVA --> PORT[Interfaces des fournisseurs]
+    PORT --> AD[Adaptateurs IA, STT et stockage]
+    EDU --> SIM
+    REC --> SIM
+    REC --> REV[Revue humaine et recours]
+    SIM --> USG[Reservations et registre d'usage]
+    BILL --> USG
+    SIM --> REPO[Depots SQLAlchemy et transactions PostgreSQL]
+    EDU --> REPO
+    REC --> REPO
+    SHR --> REPO
+    BILL --> REPO
+    JOB --> REPO
+    EVA --> REPO

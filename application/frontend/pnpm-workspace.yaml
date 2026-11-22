@@ -1,0 +1,4 @@
+allowBuilds:
+  esbuild: true
+storeDir: ../../.tooling/pnpm-store
+saveExact: true

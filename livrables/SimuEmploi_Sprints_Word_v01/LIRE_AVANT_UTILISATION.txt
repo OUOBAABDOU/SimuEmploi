@@ -1,0 +1,45 @@
+SIMUEMPLOI — SPRINTS WORD MODIFIABLES
+Version 1.0 du 20 novembre 2026
+
+27 fichiers DOCX : 1 guide commun et 26 dossiers de sprint pour cinq développeurs full stack.
+Commencer par 00_Guide_Commun_Equipe_SimuEmploi.docx. Compléter noms dates capacité estimations décisions et liens de preuve.
+S0 à S7 : socle candidat texte. Les autres dossiers sont des extensions ou consolidations conditionnées par leurs prérequis.
+Cadence proposée 10 jours ouvrés. Réestimer et scinder avant engagement si la capacité est dépassée.
+Les fichiers ne sont pas protégés. Corps titres tableaux champs de suivi et critères sont modifiables.
+
+LIMITES DE VERIFICATION
+Contenu identifiants tableaux styles et absence de protection contrôlés. Le moteur de conversion Word est absent ici ; la pagination finale DOCX n’a pas pu être vérifiée dans Word ou LibreOffice.
+Les aperçus PDF indépendants du contenu sont des éléments QA internes et ne certifient pas le rendu Word. Ils ne sont pas inclus dans le pack.
+À ouverture dans Word : mettre à jour les champs de page et vérifier les sauts de page après modifications.
+
+FICHIERS
+00_Guide_Commun_Equipe_SimuEmploi.docx
+01_Sprint_S0_Parcours_maquettes_et_contrats_initiaux.docx
+02_Sprint_S1_Fondations_et_premier_parcours_navigable.docx
+03_Sprint_S2_Compte_reel_preferences_et_catalogue_publie.docx
+04_Sprint_S3_Session_texte_et_sauvegarde_fiable.docx
+05_Sprint_S4_Retour_IA_durable_et_explicable.docx
+06_Sprint_S5_Rapport_historique_et_nouvel_essai.docx
+07_Sprint_S6_Reprise_accessibilite_et_qualite_du_coaching.docx
+08_Sprint_S7_Preparation_et_demarrage_du_pilote_candidat.docx
+09_Sprint_BF0_Observation_du_pilote_et_consolidation_candidat.docx
+10_Sprint_AM0_Contrats_appareils_et_conception_des_medias.docx
+11_Sprint_AM1_Audio_enregistre_et_transcription_fiable.docx
+12_Sprint_AM2_Video_relecture_et_transitions_de_modalite.docx
+13_Sprint_AM3_Dialogue_vocal_en_direct_et_pilote_multimodal.docx
+14_Sprint_PAY0_Offres_prix_et_registre_de_droits_commerciaux.docx
+15_Sprint_PAY1_Paiement_local_rapprochement_et_assistance.docx
+16_Sprint_EDU0_Organisations_membres_et_maquettes_etablissement.docx
+17_Sprint_EDU1_Cohortes_exercices_attribues_et_resultats_autorises.docx
+18_Sprint_EDU2_Pilote_etablissement_et_cloture_des_cohortes.docx
+19_Sprint_REC0_Campagnes_et_conception_de_la_participation_recruteur.docx
+20_Sprint_REC1_Preuves_revue_humaine_decisions_et_recours.docx
+21_Sprint_REC2_Validation_parallele_du_recrutement_et_decision_de_passage.docx
+22_Sprint_BF1_Ouverture_nationale_et_exploitation_Burkina.docx
+23_Sprint_AES0_Profils_pays_et_preparation_de_lextension_AES.docx
+24_Sprint_AES1_Pilote_Mali_et_adaptation_locale.docx
+25_Sprint_AES2_Pilote_Niger_et_consolidation_multi_pays.docx
+26_Sprint_MS0_Extraction_progressive_dun_service_justifiee_par_les_mesures.docx
+
+LIENS DU GUIDE
+Les codes dans les deux tableaux du guide ouvrent les 26 fichiers Word. Garder tous les DOCX dans le même dossier pour conserver ces liens relatifs.

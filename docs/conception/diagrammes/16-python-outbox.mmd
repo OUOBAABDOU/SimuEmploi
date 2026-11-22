@@ -1,0 +1,31 @@
+sequenceDiagram
+    actor C as Candidat
+    participant A as FastAPI
+    participant D as PostgreSQL
+    participant P as Dispatcher outbox
+    participant B as Broker
+    participant W as Worker Python
+    participant I as Fournisseur IA
+    C->>A: Reponse validee et identifiant stable
+    A->>A: Verifier identite, droits, etat et quota
+    A->>D: Transaction reponse + usage + travail + outbox
+    D-->>A: Commit
+    A-->>C: Reponse sauvegardee, analyse en attente
+    P->>D: Lire evenement outbox non livre
+    P->>B: Publier avec identifiant stable
+    B-->>P: Confirmation de publication
+    P->>D: Marquer livre
+    Note over P,B: Panne entre publication et marquage : repetition possible
+    B->>W: Livrer le travail
+    W->>D: Verifier et revendiquer travail idempotent
+    alt Travail deja termine
+        W-->>B: Accuser sans nouvel effet metier
+    else Travail a produire
+        W->>I: Contexte autorise et budget
+        I-->>W: Resultat ou erreur
+        W->>D: Valider et enregistrer resultat ou echec explicite
+        W-->>B: Accuser apres traitement durable
+    end
+    C->>A: Consulter le rapport
+    A->>D: Lire etat et ressources autorises
+    A-->>C: Rapport pret, partiel ou indisponible

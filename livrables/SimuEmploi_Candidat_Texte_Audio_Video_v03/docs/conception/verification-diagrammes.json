@@ -1,0 +1,99 @@
+{
+  "mermaidVersion": "11.17.2",
+  "diagrams": [
+    {
+      "id": "01-probleme-valeur",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "02-contexte-c4",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "03-cas-utilisation",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "04-conteneurs-c4",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "05-composants-backend",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "06-donnees-principales",
+      "valid": true,
+      "diagramType": "er"
+    },
+    {
+      "id": "07-sequence-reponse",
+      "valid": true,
+      "diagramType": "sequence"
+    },
+    {
+      "id": "08-sequence-reprise",
+      "valid": true,
+      "diagramType": "sequence"
+    },
+    {
+      "id": "09-etats-session",
+      "valid": true,
+      "diagramType": "stateDiagram"
+    },
+    {
+      "id": "10-etats-rapport",
+      "valid": true,
+      "diagramType": "stateDiagram"
+    },
+    {
+      "id": "11-sequence-paiement",
+      "valid": true,
+      "diagramType": "sequence"
+    },
+    {
+      "id": "12-revue-recruteur",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "13-deploiement",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "14-parcours-validation",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "15-variante-python",
+      "valid": true,
+      "diagramType": "flowchart-v2"
+    },
+    {
+      "id": "16-python-outbox",
+      "valid": true,
+      "diagramType": "sequence"
+    }
+  ],
+  "visuals": [
+    {
+      "id": "architecture-synthese",
+      "svgGenerated": true,
+      "width": 1700,
+      "height": 1775
+    },
+    {
+      "id": "valeur-et-usages",
+      "svgGenerated": true,
+      "width": 1700,
+      "height": 517
+    }
+  ]
+}

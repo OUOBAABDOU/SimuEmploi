@@ -1,0 +1,16 @@
+{
+  "reference_version": "S0-0.4",
+  "purpose": "Exemple de conception, aucun fournisseur réel configuré ou qualifié",
+  "providers": [
+    {"id": "provider_a", "enabled": false, "qualified": false, "capabilities": ["next_question", "evaluate_answer", "build_report"], "endpoint": null, "secret_reference": null, "allowed_data_policy": null},
+    {"id": "provider_b", "enabled": false, "qualified": false, "capabilities": ["next_question", "evaluate_answer"], "endpoint": null, "secret_reference": null, "allowed_data_policy": null},
+    {"id": "speech_provider_c", "enabled": false, "qualified": false, "capabilities": ["transcribe_audio", "synthesize_speech"], "endpoint": null, "secret_reference": null, "allowed_data_policy": null}
+  ],
+  "routing_examples": {
+    "next_question": {"preferred": "provider_a", "fallback_candidates": ["provider_b"], "require_matching_data_policy": true, "max_total_provider_attempts_proposed": 2},
+    "evaluate_answer": {"preferred": "provider_b", "fallback_candidates": ["provider_a"], "require_matching_data_policy": true},
+    "build_report": {"preferred": "provider_a", "fallback_candidates": [], "require_matching_data_policy": true},
+    "transcribe_audio": {"preferred": "speech_provider_c", "fallback_candidates": [], "require_matching_data_policy": true}
+  },
+  "production_configuration_complete": false
+}

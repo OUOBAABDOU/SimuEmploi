@@ -1,0 +1,44 @@
+{
+  "nature": "Maquettes uniquement ; aucun microphone, caméra, fichier réel ou fournisseur IA",
+  "screens": 12,
+  "modalities": 2,
+  "layoutChecks": 96,
+  "degradedStateChecks": 140,
+  "widths": [
+    320,
+    360,
+    736,
+    1024
+  ],
+  "browserErrors": [],
+  "networkRequests": 0,
+  "interactions": [
+    "permission refusée et test simulé",
+    "enregistrement/pause/arrêt",
+    "consentement avant envoi",
+    "vidéo non transmise par défaut",
+    "envoi interrompu/reprise simulée",
+    "correction/version de transcription",
+    "échec analyse",
+    "nouvelle question",
+    "relecture et confirmation de remplacement",
+    "consentement dialogue direct",
+    "micro coupé et interruption du coach",
+    "sous-titres",
+    "pause et bascule après coupure",
+    "fin avec confirmation et focus",
+    "caméra absente vers audio",
+    "solution texte"
+  ],
+  "screenshots": [
+    "audio-reglages-desktop.png",
+    "video-reglages-desktop.png",
+    "audio-enregistrement-mobile.png",
+    "video-enregistrement-desktop.png",
+    "video-relecture-mobile.png",
+    "audio-direct-desktop.png",
+    "video-direct-desktop.png",
+    "video-coupure-mobile.png",
+    "video-direct-sombre.png"
+  ]
+}
