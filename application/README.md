@@ -8,6 +8,8 @@ Cette première tranche de S1 permet de parcourir découverte, catalogue, prépa
 
 ## Ouvrir la version locale
 
+**Démo S0 guidée et partage temporaire depuis ce PC :** voir [le guide d’hébergement et d’essais](demo/README.md). Le portail réunit le catalogue réel, les maquettes candidat et médias, les dix tâches d’essai et un export local des observations. Il se lance sur `http://127.0.0.1:5180/` avec `start-demo.ps1` ; le lien HTTPS à partager est affiché par le tunnel. Les essais terrain et la réception S0 restent à réaliser.
+
 Lorsque les deux serveurs sont lancés :
 
 - Interface : <http://127.0.0.1:5173/>
