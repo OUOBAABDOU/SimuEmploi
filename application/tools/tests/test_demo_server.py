@@ -7,7 +7,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from tools.serve_demo import create_demo_app
+from tools.serve_demo import VIDEO_FILE, create_demo_app
 
 
 @pytest.fixture
@@ -71,3 +71,19 @@ def test_tunnel_host_allowed_other_host_refused(client):
         == 200
     )
     assert client.get("/", headers={"Host": "unrelated.example"}).status_code == 400
+
+
+def test_video_player_and_streaming(client):
+    assert client.get("/video").status_code == 200
+    assert client.get("/video-poster.png").headers["content-type"] == "image/png"
+    assert client.get("/video-demo.vtt").text.startswith("WEBVTT")
+    head = client.head("/video-demo.mp4")
+    assert head.status_code == 200
+    assert head.content == b""
+    assert int(head.headers["content-length"]) == VIDEO_FILE.stat().st_size
+    chunk = client.get("/video-demo.mp4", headers={"Range": "bytes=0-1023"})
+    assert chunk.status_code == 206
+    assert len(chunk.content) == 1024
+    assert chunk.headers["content-type"] == "video/mp4"
+    downloaded = client.head("/video-demo.mp4?download=true")
+    assert "attachment" in downloaded.headers["content-disposition"]

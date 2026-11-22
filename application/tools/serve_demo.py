@@ -11,6 +11,10 @@ from starlette.staticfiles import StaticFiles
 APPLICATION = Path(__file__).resolve().parents[1]
 PUBLIC = APPLICATION / "demo" / "public"
 REVIEW = APPLICATION / "docs" / "sprints" / "S0-cloture" / "maquettes"
+VIDEO_ROOT = APPLICATION / "demo" / "video"
+VIDEO_FILE = (
+    APPLICATION.parent / "livrables" / "SimuEmploi_Demonstration_Commentee_v01.mp4"
+)
 
 
 def create_demo_app():
@@ -57,6 +61,39 @@ def create_demo_app():
     @app.get("/demo.js", include_in_schema=False)
     def script():
         return FileResponse(PUBLIC / "demo.js", media_type="text/javascript")
+
+    @app.get("/video", include_in_schema=False)
+    def video_page():
+        return FileResponse(PUBLIC / "video.html", media_type="text/html")
+
+    @app.api_route("/video-demo.mp4", methods=["GET", "HEAD"], include_in_schema=False)
+    def video_file(download: bool = False):
+        if not VIDEO_FILE.is_file():
+            raise HTTPException(status_code=404)
+        return FileResponse(
+            VIDEO_FILE,
+            media_type="video/mp4",
+            filename=VIDEO_FILE.name,
+            content_disposition_type="attachment" if download else "inline",
+        )
+
+    @app.get("/video-poster.png", include_in_schema=False)
+    def video_poster():
+        return FileResponse(VIDEO_ROOT / "poster.png", media_type="image/png")
+
+    @app.get("/video-demo.vtt", include_in_schema=False)
+    def video_subtitles():
+        return FileResponse(VIDEO_ROOT / "sous-titres.vtt", media_type="text/vtt")
+
+    @app.get("/video-chapters.json", include_in_schema=False)
+    def video_chapters():
+        return FileResponse(
+            VIDEO_ROOT / "chapitres.json", media_type="application/json"
+        )
+
+    @app.get("/video.js", include_in_schema=False)
+    def video_script():
+        return FileResponse(PUBLIC / "video.js", media_type="text/javascript")
 
     @app.get("/maquettes/{filename}", include_in_schema=False)
     def mockup(filename: str):

@@ -1,0 +1,21 @@
+{
+  "decode_exit_code": 0,
+  "duration": "00:06:19.31",
+  "h264": true,
+  "aac": true,
+  "resolution_1080p": true,
+  "mean_volume_db": -20.5,
+  "max_volume_db": -1.5,
+  "faststart": true,
+  "size_mib": 6.96,
+  "sha256": "404607f35bea5d49f62257c23fd0798843354df8241266388c576d320dd7dced",
+  "frames_inspected_seconds": [
+    12,
+    95,
+    198,
+    265,
+    322,
+    354
+  ],
+  "candidate_evidence_created": false
+}

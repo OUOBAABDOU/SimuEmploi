@@ -2,6 +2,8 @@
 
 Ce dossier ajoute un guide public d’essais à la référence S0-0.4. Il ne reçoit pas S0 et ne démarre pas un nouveau sprint métier. La branche de travail est `demo/hebergement-tests`.
 
+**Vidéo explicative disponible :** ouvrir `/video` depuis le lien courant pour le lecteur et le téléchargement MP4. La [source du montage](video/README.md) comprend la narration, les sous-titres et les captures. Le fichier téléchargé peut se regarder hors ligne.
+
 ## Ce que les testeurs peuvent essayer
 
 | Espace | Fonctionnement réel | Limites |

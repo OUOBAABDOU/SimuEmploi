@@ -1,0 +1,162 @@
+{
+  "duration_seconds": 379.267,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 15,
+  "voice": "Microsoft Hortense Desktop",
+  "subtitle_cues": 61,
+  "timeline": [
+    {
+      "scene": 1,
+      "chapter": "Découvrir",
+      "title": "Préparer son premier entretien",
+      "start": 0.0,
+      "duration": 16.4
+    },
+    {
+      "scene": 2,
+      "chapter": "Découvrir",
+      "title": "Trois espaces, trois usages",
+      "start": 16.4,
+      "duration": 20.8
+    },
+    {
+      "scene": 3,
+      "chapter": "Application actuelle",
+      "title": "Choisir ce que l’on prépare",
+      "start": 37.2,
+      "duration": 16.467
+    },
+    {
+      "scene": 4,
+      "chapter": "Application actuelle",
+      "title": "Filtrer selon son objectif",
+      "start": 53.667,
+      "duration": 16.933
+    },
+    {
+      "scene": 5,
+      "chapter": "Application actuelle",
+      "title": "Lire la préparation",
+      "start": 70.6,
+      "duration": 17.2
+    },
+    {
+      "scene": 6,
+      "chapter": "Application actuelle",
+      "title": "Trouver un exemple utile",
+      "start": 87.8,
+      "duration": 17.4
+    },
+    {
+      "scene": 7,
+      "chapter": "Parcours candidat",
+      "title": "Passer à la maquette interactive",
+      "start": 105.2,
+      "duration": 16.0
+    },
+    {
+      "scene": 8,
+      "chapter": "Parcours candidat",
+      "title": "Commencer une session simulée",
+      "start": 121.2,
+      "duration": 14.933
+    },
+    {
+      "scene": 9,
+      "chapter": "Parcours candidat",
+      "title": "Lire la question et son aide",
+      "start": 136.133,
+      "duration": 16.867
+    },
+    {
+      "scene": 10,
+      "chapter": "Parcours candidat",
+      "title": "Écrire avec ses propres mots",
+      "start": 153.0,
+      "duration": 17.467
+    },
+    {
+      "scene": 11,
+      "chapter": "Parcours candidat",
+      "title": "Comprendre le retour simulé",
+      "start": 170.467,
+      "duration": 17.533
+    },
+    {
+      "scene": 12,
+      "chapter": "Parcours candidat",
+      "title": "Une relance liée au tour précédent",
+      "start": 188.0,
+      "duration": 19.533
+    },
+    {
+      "scene": 13,
+      "chapter": "Parcours candidat",
+      "title": "Tester une connexion interrompue",
+      "start": 207.533,
+      "duration": 18.2
+    },
+    {
+      "scene": 14,
+      "chapter": "Parcours candidat",
+      "title": "Faire une pause et reprendre",
+      "start": 225.733,
+      "duration": 16.2
+    },
+    {
+      "scene": 15,
+      "chapter": "Audio et vidéo",
+      "title": "Explorer l’entretien audio",
+      "start": 241.933,
+      "duration": 16.267
+    },
+    {
+      "scene": 16,
+      "chapter": "Audio et vidéo",
+      "title": "Explorer l’entretien vidéo",
+      "start": 258.2,
+      "duration": 16.933
+    },
+    {
+      "scene": 17,
+      "chapter": "Réaliser un test",
+      "title": "Démarrer une séance de test",
+      "start": 275.133,
+      "duration": 20.933
+    },
+    {
+      "scene": 18,
+      "chapter": "Réaliser un test",
+      "title": "Noter ce qui se passe",
+      "start": 296.067,
+      "duration": 20.533
+    },
+    {
+      "scene": 19,
+      "chapter": "Réaliser un test",
+      "title": "Télécharger les observations",
+      "start": 316.6,
+      "duration": 21.133
+    },
+    {
+      "scene": 20,
+      "chapter": "Tester à distance",
+      "title": "Ouvrir le lien depuis un autre pays",
+      "start": 337.733,
+      "duration": 20.733
+    },
+    {
+      "scene": 21,
+      "chapter": "À vous de jouer",
+      "title": "Essayer, observer, améliorer",
+      "start": 358.467,
+      "duration": 20.8
+    }
+  ],
+  "video_mib": 6.96,
+  "synthetic_demonstration": true,
+  "candidate_tests_completed": 0
+}

@@ -1,0 +1,243 @@
+1
+00:00:00,000 --> 00:00:07,261
+Bienvenue dans SimuEmploi. Ce projet aide les candidats à préparer un premier emploi ou un stage, d’abord au
+
+2
+00:00:07,261 --> 00:00:14,589
+Burkina Faso, puis dans les autres pays de l’A E S. Cette vidéo présente la démonstration et explique comment
+
+3
+00:00:14,589 --> 00:00:15,732
+réaliser un test.
+
+4
+00:00:16,400 --> 00:00:24,247
+La démonstration propose trois espaces. Le catalogue connecté fonctionne avec le backend Python. Le parcours
+
+5
+00:00:24,247 --> 00:00:32,022
+candidat et les écrans audio et vidéo sont des maquettes interactives. Leurs réponses, retours et dialogues
+
+6
+00:00:32,022 --> 00:00:36,527
+sont fictifs ; aucune intelligence artificielle n’est appelée.
+
+7
+00:00:37,200 --> 00:00:44,792
+Dans l’application actuelle, ouvrez les exercices. Trois situations sont proposées : un premier stage, un
+
+8
+00:00:44,792 --> 00:00:52,456
+premier emploi et une présentation de votre parcours. Le catalogue affiché ici vient réellement de l’A P I
+
+9
+00:00:52,456 --> 00:00:52,962
+Python.
+
+10
+00:00:53,667 --> 00:01:01,861
+Choisissez le filtre premier emploi ou stage. Deux exercices restent affichés. Ce filtre permet de retrouver
+
+11
+00:01:01,861 --> 00:01:09,903
+rapidement la situation à préparer. La présentation de votre parcours constitue un autre point de travail.
+
+12
+00:01:10,600 --> 00:01:18,039
+Ouvrez la préparation du premier stage. Lisez l’objectif, les repères et la durée indicative. Cette
+
+13
+00:01:18,039 --> 00:01:26,005
+application permet actuellement de consulter les exercices. Les comptes et les séances réelles ne sont pas
+
+14
+00:01:26,005 --> 00:01:27,132
+encore ouverts.
+
+15
+00:01:27,800 --> 00:01:34,689
+Dépliez une question pour lire ses repères. Une expérience salariée n’est pas obligatoire : un projet
+
+16
+00:01:34,689 --> 00:01:41,647
+scolaire, une activité personnelle ou informelle peut donner un exemple. Le service aide à préparer un
+
+17
+00:01:41,647 --> 00:01:44,512
+entretien et ne garantit pas une embauche.
+
+18
+00:01:45,200 --> 00:01:52,167
+Passons maintenant à la maquette du parcours candidat. Choisissez le premier entretien de stage. Les
+
+19
+00:01:52,167 --> 00:01:59,552
+sélecteurs écran et situation servent à animer la démonstration ; ils ne représentent pas des fonctions du
+
+20
+00:01:59,552 --> 00:02:00,527
+futur produit.
+
+21
+00:02:01,200 --> 00:02:08,646
+Lisez les consignes puis cliquez sur commencer la session. La référence prévoit cinq axes, jusqu’à sept
+
+22
+00:02:08,646 --> 00:02:15,442
+questions et au plus deux relances. Le parcours se fait à votre rythme, sans compte à rebours.
+
+23
+00:02:16,133 --> 00:02:23,662
+La première question demande quel stage vous recherchez et ce que vous souhaitez apprendre. Une aide explique
+
+24
+00:02:23,662 --> 00:02:30,638
+comment organiser vos idées. Pendant le test, utilisez une réponse inventée, sans nom, coordonnées ou
+
+25
+00:02:30,638 --> 00:02:32,296
+information personnelle.
+
+26
+00:02:33,000 --> 00:02:40,377
+Voici une réponse fictive : je souhaite un stage en comptabilité pour apprendre la saisie. Relisez votre
+
+27
+00:02:40,377 --> 00:02:48,110
+réponse avant de la valider. Le nombre de mots est un repère, pas une note. La saisie de cette maquette reste
+
+28
+00:02:48,110 --> 00:02:49,812
+en mémoire dans la page.
+
+29
+00:02:50,467 --> 00:02:57,912
+Après validation, la maquette montre l’écran de retour. Ce conseil est un exemple préécrit ; il n’analyse pas
+
+30
+00:02:57,912 --> 00:03:05,357
+réellement votre texte. Cette distinction est essentielle pour que les testeurs comprennent ce qui fonctionne
+
+31
+00:03:05,357 --> 00:03:07,338
+et ce qui reste à développer.
+
+32
+00:03:08,000 --> 00:03:16,254
+Demandez la question suivante. La relance reprend un extrait de la réponse et le thème du stage. Le contexte
+
+33
+00:03:16,254 --> 00:03:24,431
+précédent permet de revoir la question et le texte confirmé. Ici, une règle locale illustre ce comportement
+
+34
+00:03:24,431 --> 00:03:26,877
+adaptatif, sans fournisseur I A.
+
+35
+00:03:27,533 --> 00:03:34,863
+Simulez ensuite une connexion interrompue. Le message aide à distinguer le brouillon de maquette et une
+
+36
+00:03:34,863 --> 00:03:42,620
+réponse envoyée au serveur. Dans cette démonstration, aucune sauvegarde en ligne n’a lieu. Actualiser la page
+
+37
+00:03:42,620 --> 00:03:45,040
+fait perdre les réponses fictives.
+
+38
+00:03:45,733 --> 00:03:52,970
+Revenez en situation normale, faites une pause puis ouvrez l’accueil. Le bouton reprendre mon entraînement
+
+39
+00:03:52,970 --> 00:04:00,411
+permet de retrouver la session dans la même page. Observez si un candidat comprend cette reprise sans aide de
+
+40
+00:04:00,411 --> 00:04:01,230
+l’animateur.
+
+41
+00:04:01,933 --> 00:04:09,420
+Les futurs parcours audio montrent le choix du déroulement et les réglages du microphone. La maquette permet
+
+42
+00:04:09,420 --> 00:04:16,976
+d’explorer ces écrans sans activer le micro. Aucun enregistrement, transcription ou dialogue vocal réel n’est
+
+43
+00:04:16,976 --> 00:04:17,530
+produit.
+
+44
+00:04:18,200 --> 00:04:25,625
+En présentation vidéo, vous pouvez découvrir la relecture d’une prise et les étapes suivantes. La caméra reste
+
+45
+00:04:25,625 --> 00:04:33,049
+désactivée. Ces écrans servent à vérifier les consignes et les transitions, avant de développer puis qualifier
+
+46
+00:04:33,049 --> 00:04:34,467
+les fonctions médias.
+
+47
+00:04:35,133 --> 00:04:43,394
+Pour tester la démonstration, revenez au guide. Choisissez le pays, l’objectif et votre rôle, puis acceptez la
+
+48
+00:04:43,394 --> 00:04:51,354
+participation et démarrez la séance. Le code aléatoire remplace l’identité. Les personnes visibles dans ce
+
+49
+00:04:51,354 --> 00:04:55,410
+montage sont des exemples, pas des participants réels.
+
+50
+00:04:56,067 --> 00:05:03,420
+Suivez les dix tâches du test. Pour chacune, indiquez le résultat et notez ce qui s’est réellement passé. Le
+
+51
+00:05:03,420 --> 00:05:10,910
+bouton voir un exemple fictif explique une interaction, mais ne remplit aucun succès. Les notes de cette vidéo
+
+52
+00:05:10,910 --> 00:05:15,948
+sont explicitement synthétiques et ne comptent pas comme essais candidats.
+
+53
+00:05:16,600 --> 00:05:24,373
+Après le bilan, vérifiez que la séance est complète, puis téléchargez le compte rendu. Les notes ne sont pas
+
+54
+00:05:24,373 --> 00:05:31,715
+envoyées automatiquement. Remettez le fichier au coordinateur par le canal convenu. Il doit relire les
+
+55
+00:05:31,715 --> 00:05:37,041
+observations et attester le contexte réel avant toute réception de S zéro.
+
+56
+00:05:37,733 --> 00:05:45,897
+Un testeur à distance ouvre le lien H T T P S partagé dans son navigateur. Le serveur reste sur l’ordinateur
+
+57
+00:05:45,897 --> 00:05:54,136
+du porteur, relié par un tunnel temporaire. L’ordinateur doit rester allumé, connecté et hors veille. Le lien
+
+58
+00:05:54,136 --> 00:05:57,765
+change généralement après une relance du tunnel.
+
+59
+00:05:58,467 --> 00:06:05,882
+Vous pouvez maintenant essayer SimuEmploi. Commencez par un premier stage ou emploi, utilisez un exemple
+
+60
+00:06:05,882 --> 00:06:13,653
+fictif et décrivez les difficultés rencontrées. Les essais réels et leur relecture permettront d’améliorer le
+
+61
+00:06:13,653 --> 00:06:18,573
+parcours. Cette vidéo ne remplace pas la validation du sprint S zéro.
